@@ -10,7 +10,7 @@
   WhatsApp number and lead tag: CONFIG at the top of the <script>.
 -->
 <title>Dentvibe Kadıköy · Yeni gülüşünüz bir mesaj uzağınızda</title>
-<meta name="description" content="Kadıköy’de diş implantı, E.max lamine, zirkonyum kaplama, gülüş tasarımı ve kompozit bonding. İlgilendiğiniz tedavileri seçin, randevunuzu WhatsApp’tan alın.">
+<meta name="description" content="Kadıköy’de diş implantı, porselen lamine, zirkonyum kaplama ve gülüş tasarımı. İlgilendiğiniz tedavileri seçin, randevunuzu WhatsApp’tan alın.">
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#07163C">
@@ -810,91 +810,92 @@ const CONFIG = {
 const TR_SITE = 'https://www.dentvibe.com.tr/';
 
 /* ============================== DATA (published by the clinic; wording follows dentvibe.com.tr) ============================== */
-/* Audience: local patients in Turkey (clinic brief, 2026-11-16). No health-tourism content, no English. */
+/* Audience: local patients in Turkey (clinic brief, 2026-11-16). No health-tourism content, no English.
+   Plain, everyday Turkish: brand and technical names (AuraThin™, DigiFix Direct™, All-on-6, E.max, bonding) are not shown. */
 const SERVICES = [
   { id:'implants', img:'implants', badge:'real', caseId:'fatima', url:'dis-implantlari',
-    kicker:'Diş eksikliği', title:'Diş İmplantı',
-    line:'Eksik dişin yerine, çene kemiğiyle bütünleşen yapay diş kökü.',
-    facts:[['shield','10 yıl garanti'],['gem','A+ materyal kalitesi']],
+    kicker:'Eksik dişler için', title:'Diş İmplantı',
+    line:'Eksik dişin yerine, çene kemiğine yerleşen yapay diş kökü.',
+    facts:[['shield','10 yıl garanti'],['gem','Birinci sınıf malzeme']],
     msg:'Diş implantı' },
-  { id:'digifix', img:'digifix', badge:'bridge', caseId:'fatna', url:'hizmetler',
-    kicker:'Aynı gün sabit diş', title:'DigiFix Direct™',
-    line:'İmplantlarınızın yapıldığı gün sabit geçici dişlerinize kavuşun.',
-    facts:[['bolt','Aynı gün'],['check','Hareketli protez yok']],
-    msg:'DigiFix Direct™ (aynı gün sabit diş)' },
+  { id:'digifix', img:'digifix', badge:'bridge', caseId:'fatna', url:'dis-implantlari',
+    kicker:'İmplant günü', title:'Aynı Gün Sabit Diş',
+    line:'İmplant yapıldığı gün sabit geçici dişleriniz takılır, dişsiz kalmazsınız.',
+    facts:[['bolt','Aynı gün'],['check','Takıp çıkarma yok']],
+    msg:'Aynı gün sabit diş (implant üstü)' },
   { id:'veneers', img:'veneers', badge:'real', caseId:'angela', url:'lamina-porselen',
-    kicker:'Estetik diş hekimliği', title:'E.max Lamine',
-    line:'Doğal diş gibi ışık geçiren, ince ve dayanıklı porselen lamineler.',
+    kicker:'Estetik', title:'Porselen Lamine',
+    line:'Dişin önüne yapıştırılan ince porselen; doğal diş gibi görünür.',
     facts:[['shield','5 yıl garanti'],['flask','Kendi laboratuvarımızda']],
-    msg:'E.max lamine' },
-  { id:'aurathin', img:'aurathin', badge:'real', caseId:'elif', url:'hizmetler',
-    kicker:'Kesimsiz lamine', title:'AuraThin™',
-    line:'Dişleriniz kesilmeden uygulanan, ultra ince E.max lamineler.',
-    facts:[['feather','Diş kesimi yok'],['shield','5 yıl garanti']],
-    msg:'AuraThin™ kesimsiz lamine' },
+    msg:'Porselen lamine' },
+  { id:'aurathin', img:'aurathin', badge:'real', caseId:'elif', url:'lamina-porselen',
+    kicker:'Estetik', title:'Kesimsiz Lamine',
+    line:'Dişleriniz kesilmeden yapıştırılan, çok ince porselen lamine.',
+    facts:[['feather','Diş kesilmez'],['shield','5 yıl garanti']],
+    msg:'Kesimsiz lamine' },
   { id:'crowns', img:'crowns', badge:'real', caseId:'nikolai', url:'zirkonyum-dis',
     kicker:'Diş kaplama', title:'Zirkonyum Kaplama',
     line:'Metal içermeyen, doğal görünümlü ve sağlam kaplamalar.',
     facts:[['gem','Metal içermez'],['flask','Kendi laboratuvarımızda']],
     msg:'Zirkonyum kaplama' },
   { id:'bonding', img:'bonding', badge:'real', caseId:'ben', url:'hizmetler',
-    kicker:'Tek seansta estetik', title:'Kompozit Bonding',
-    line:'Kırık, aralık ve renk bozuklukları tek seansta giderilir.',
-    facts:[['bolt','Tek seans'],['gem','Yüksek yoğunluklu materyal']],
-    msg:'Kompozit bonding' },
+    kicker:'Dolgu ile estetik', title:'Tek Seansta Diş Estetiği',
+    line:'Kırık, aralıklı ya da lekeli dişler, diş rengi dolguyla tek seansta düzeltilir.',
+    facts:[['bolt','Tek seans'],['gem','Diş rengi dolgu']],
+    msg:'Tek seansta diş estetiği (dolgu ile)' },
   { id:'makeover', img:'makeover', badge:'real', caseId:'melissa', url:'gulus-tasarimi',
     kicker:'Lamine veya zirkonyum', title:'Gülüş Tasarımı',
     line:'Dişleriniz, diş etleriniz ve yüz hatlarınız birlikte planlanır.',
-    facts:[['scan','Dijital planlama'],['shield','5 yıl garanti']],
+    facts:[['scan','Yüzünüze özel'],['shield','5 yıl garanti']],
     msg:'Gülüş tasarımı' }
 ];
 
 /* before / after: shown by treatment only, no patient names */
 const CASES = [
-  { id:'fatima',   tag:'İmplant',        label:'İmplant ve zirkonyum' },
-  { id:'fatna',    tag:'All-on-6',       label:'Zirkonyum ile All-on-6' },
-  { id:'nina',     tag:'All-on-6',       label:'Zirkonyum ile All-on-6' },
-  { id:'kayley',   tag:'Tam ağız',       label:'Tam ağız implant, hibrit protez' },
-  { id:'angela',   tag:'Lamine',         label:'E.max lamine' },
-  { id:'khalida',  tag:'Lamine',         label:'E.max lamine' },
-  { id:'elif',     tag:'Kesimsiz',       label:'Kesimsiz E.max lamine' },
-  { id:'duygu',    tag:'Kesimsiz',       label:'Kesimsiz E.max lamine' },
-  { id:'nikolai',  tag:'Zirkonyum',      label:'Multilayer monolitik zirkonyum' },
-  { id:'sergey',   tag:'Zirkonyum',      label:'Multilayer monolitik zirkonyum' },
-  { id:'palwasha', tag:'Zirkonyum',      label:'Zirkonyum kaplama' },
-  { id:'ben',      tag:'Bonding',        label:'Beyazlatma ve kompozit bonding' },
-  { id:'melissa',  tag:'Gülüş tasarımı', label:'Zirkonyum gülüş tasarımı' }
+  { id:'fatima',   tag:'İmplant',         label:'İmplant ve zirkonyum kaplama' },
+  { id:'fatna',    tag:'Tüm çene',        label:'İmplant üstü sabit tüm çene' },
+  { id:'nina',     tag:'Tüm çene',        label:'İmplant üstü sabit tüm çene' },
+  { id:'kayley',   tag:'Tüm ağız',        label:'Tüm ağız implant üstü sabit diş' },
+  { id:'angela',   tag:'Lamine',          label:'Porselen lamine' },
+  { id:'khalida',  tag:'Lamine',          label:'Porselen lamine' },
+  { id:'elif',     tag:'Kesimsiz',        label:'Kesimsiz porselen lamine' },
+  { id:'duygu',    tag:'Kesimsiz',        label:'Kesimsiz porselen lamine' },
+  { id:'nikolai',  tag:'Zirkonyum',       label:'Zirkonyum kaplama' },
+  { id:'sergey',   tag:'Zirkonyum',       label:'Zirkonyum kaplama' },
+  { id:'palwasha', tag:'Zirkonyum',       label:'Zirkonyum kaplama' },
+  { id:'ben',      tag:'Dolgu estetiği',  label:'Diş beyazlatma ve dolgu ile estetik' },
+  { id:'melissa',  tag:'Gülüş tasarımı',  label:'Zirkonyum ile gülüş tasarımı' }
 ];
 
 const DOCTORS = [
   { id:'kavaz', img:'cagatay-kavaz', name:'Dr. Çağatay Kavaz', founder:true,
     role:'Kurucu ve Başhekim',
-    creds:['İstanbul Üniversitesi, 2012','2014’ten beri implantoloji','ITI ve OSSEDER üyesi'],
-    bio:'2014’ten bu yana ileri diş cerrahisi ve implantoloji alanında çalışıyor. Kliniğe gelen her hastanın tanı ve tedavi planlamasını bizzat takip ediyor.' },
+    creds:['İstanbul Üniversitesi, 2012','2014’ten beri implant ve cerrahi','İmplant derneklerine üye'],
+    bio:'2014’ten bu yana diş cerrahisi ve implant tedavileri alanında çalışıyor. Kliniğe gelen her hastanın tedavi planını bizzat takip ediyor.' },
   { id:'buber', img:'gokhan-buber', name:'Dr. Gökhan Buber',
-    role:'Kesimsiz lamine ve gülüş tasarımı',
-    creds:['Marmara Üniversitesi, 2018','AuraThin™ protokolü'],
-    bio:'2024’ten bu yana Dentvibe’da sorumlu diş hekimi olarak çalışıyor. Lamine, kesimsiz lamine, gülüş tasarımı ve zirkonyum uygulamalarında doğal dişi mümkün olduğunca koruyan bir yaklaşım benimsiyor.' },
+    role:'Lamine ve gülüş tasarımı',
+    creds:['Marmara Üniversitesi, 2018','Kesimsiz lamine'],
+    bio:'2024’ten bu yana Dentvibe’da sorumlu diş hekimi olarak çalışıyor. Lamine, kesimsiz lamine, gülüş tasarımı ve zirkonyumda doğal dişi mümkün olduğunca korumaya özen gösteriyor.' },
   { id:'agrali', img:'omer-birkan-agrali', name:'Dr. Ömer Birkan Ağralı',
-    role:'Periodontist (diş eti uzmanı)',
-    creds:['Periodontoloji doktorası','Marmara Üniversitesi’nde doçent'],
-    bio:'Diş eti hastalıklarının tedavisi, yumuşak doku cerrahisi ve pembe estetik alanında uzman. İmplant uygulamaları ve kemik yetersizliği olan vakalarda kemik grefti işlemleri de yapıyor.' },
+    role:'Diş eti uzmanı',
+    creds:['Diş eti hastalıkları doktorası','Marmara Üniversitesi’nde doçent'],
+    bio:'Diş eti hastalıkları, diş eti ameliyatları ve diş eti estetiği alanında uzman. İmplant tedavilerini ve kemiği yetersiz hastalarda kemik tamamlama işlemlerini de yapıyor.' },
   { id:'badur', img:'busra-badur', name:'Dr. Büşra Badur',
-    role:'Restoratif diş tedavisi ve pedodonti',
-    creds:['Marmara Üniversitesi, 2020','Pedodonti doktorası'],
-    bio:'Her yaştan hastaya estetik ve işlevsel dolgu ve restorasyon tedavileri uyguluyor. Çocuk hastalarda korkusuz ve sakin bir tedavi ortamını ön planda tutuyor.' },
+    role:'Dolgu tedavileri ve çocuk diş hekimliği',
+    creds:['Marmara Üniversitesi, 2020','Çocuk diş hekimliği doktorası'],
+    bio:'Her yaştan hastaya estetik dolgu tedavileri uyguluyor. Çocuk hastaların dişçiden korkmadan, rahat tedavi olmasına özen gösteriyor.' },
   { id:'arican', img:'esra-gokkaya-arican', name:'Dr. Esra Gökkaya Arıcan',
-    role:'Ortodontist · Invisalign',
-    creds:['Ortodonti doktorası','Invisalign Platinum Provider'],
-    bio:'Çocuk, genç ve yetişkinlerde şeffaf plak tedavisi, sabit ve hareketli apareyler ile çene cerrahisi destekli ortodonti tedavileri uyguluyor.' },
+    role:'Diş teli ve şeffaf plak',
+    creds:['Ortodonti doktorası','Şeffaf plak (Invisalign) uzmanı'],
+    bio:'Çocuk, genç ve yetişkinlerde diş teli ve şeffaf plak tedavileri uyguluyor; gerektiğinde çene cerrahisiyle birlikte tedavi planlıyor.' },
   { id:'turkyilmaz', img:'ege-turkyilmaz', name:'Dr. Ege Türkyılmaz',
-    role:'Endodontist (kanal tedavisi uzmanı)',
-    creds:['Endodonti doktorası, 2018','Mikroskop destekli endodonti'],
-    bio:'Mikroskop destekli kanal tedavileri, kanal tedavisi yenilemeleri ve zor vakalarda uzman. İmplant ve protez uygulamaları da yapıyor.' },
+    role:'Kanal tedavisi uzmanı',
+    creds:['Kanal tedavisi doktorası, 2018','Mikroskopla kanal tedavisi'],
+    bio:'Mikroskop yardımıyla kanal tedavisi, eski kanal tedavilerinin yenilenmesi ve zor vakalarda uzman. İmplant ve protez tedavileri de yapıyor.' },
   { id:'celik', img:'ilayda-celik', name:'Dr. İlayda Çelik',
     role:'Diş hekimi',
     creds:['İstanbul Medipol Üniversitesi, 2025'],
-    bio:'Koruyucu ve restoratif tedaviler ile kanal ve diş eti tedavileri uyguluyor. Çocuk diş hekimliğine özel ilgi duyuyor.' }
+    bio:'Koruyucu tedaviler, dolgu, kanal ve diş eti tedavileri uyguluyor. Çocuk hastalarla çalışmaya özel ilgi duyuyor.' }
 ];
 
 /* local patients' reviews from dentvibe.com.tr/hasta-yorumlari, verbatim, shortened */
@@ -909,15 +910,15 @@ const REVIEWS = [
     q:'Genel kontrol ve temizlik için geldim ve temizliği yapan doktorun elleri çok hafifti. … Alan titizlikle temiz, ekipmanlar yeni ve herkes çok profesyonel ve misafirperver.' }
 ];
 
-const INCLUDED = { tr:[['users','Alanında uzman, tecrübeli hekimler'],['flask','Kendi laboratuvarımızda hızlı üretim'],['gem','A+ materyal kalitesi'],['scan','Tüm röntgenler klinik içinde'],['headset','7/24 kişisel hasta koordinatörü'],['shield','Sınırlı hasta kabulü, butik hizmet']] };
+const INCLUDED = { tr:[['users','Alanında uzman, tecrübeli hekimler'],['flask','Kendi laboratuvarımızda hızlı üretim'],['gem','Birinci sınıf malzeme'],['scan','Tüm röntgenler klinikte çekilir'],['headset','7/24 ulaşabileceğiniz hasta koordinatörü'],['shield','Sınırlı hasta kabulü, size ayrılan zaman']] };
 const STEPS = { tr:[
   ['Bize yazın ya da arayın','WhatsApp, Instagram veya telefon; size hangisi kolaysa.'],
-  ['Koordinatörünüz size dönsün','Kişisel hasta koordinatörünüz sorularınızı yanıtlar ve randevunuzu planlar.'],
+  ['Koordinatörünüz size dönsün','Hasta koordinatörünüz sorularınızı yanıtlar ve randevunuzu ayarlar.'],
   ['Muayene ve tedavi planı','Hekiminiz sizi muayene eder; size uygun seçenekleri ve fiyatı açıkça anlatır.'],
   ['Tedaviniz başlasın','Planınıza göre, alanında uzman hekimimizle.'],
-  ['Kontrolleriniz devam etsin','Tedavi sonrasında da sorularınız için hekiminize kolayca ulaşırsınız.']
+  ['Kontrolleriniz devam etsin','Tedaviden sonra da sorularınız için hekiminize kolayca ulaşırsınız.']
 ] };
-const STATS = { tr:[['10',' yıl','A+ implantlarımıza cerrahlarımızdan garanti.'],['5',' yıl','Kendi laboratuvarımızda yapılan kozmetik işlemlere garanti.'],['7/24','','Kişisel hasta koordinatörünüze her zaman ulaşabilirsiniz.']] };
+const STATS = { tr:[['10',' yıl','İmplantlarımıza cerrahlarımızdan garanti.'],['5',' yıl','Kendi laboratuvarımızda yapılan estetik işlemlere garanti.'],['7/24','','Hasta koordinatörünüze her zaman ulaşabilirsiniz.']] };
 
 /* ============================== STRINGS ============================== */
 const T = {
@@ -927,7 +928,7 @@ const T = {
     deck:'Tedaviler', prev:'Önceki tedavi', next:'Sonraki tedavi', prevGen:'Önceki', nextGen:'Sonraki',
     hint:'Birden fazla tedavi seçebilirsiniz.', add:'Seç', added:'Seçildi', details:'Detaylar',
     addAria:t=>`${t} tedavisini seç`, slide:(i,n)=>`${i} / ${n}`, goTo:t=>`${t} kartına git`,
-    badgeReal:'Gerçek sonuç', badgeBridge:'Hibrit köprü',
+    badgeReal:'Gerçek sonuç', badgeBridge:'Sabit köprü',
     dockL1:'WhatsApp’tan randevu al', dockMany:n=>`${n} tedavi seçildi`, callClinic:'Kliniği arayın',
     resEyebrow:'Gerçek sonuçlar', resTitle:'Hastalarımızın öncesi ve sonrası.', resSub:'Karşılaştırmak için çizgiyi sağa sola kaydırın. Her hastanın sonucu farklıdır; tedavi planınız muayeneden sonra size özel hazırlanır.',
     resGallery:'Tüm gülüş galerisi', before:'Öncesi', after:'Sonrası', cmpRange:'Öncesi ve sonrası karşılaştırması', cases:'Vakalar',
