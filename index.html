@@ -720,7 +720,7 @@ a.row:hover,a.row:active{background:rgb(255 255 255 / .05)}
     <div class="shell contact-grid">
       <div data-reveal>
         <h2 id="contact-title" data-t="ctTitle">Randevunuzu hemen planlayalım.</h2>
-        <p class="lead" style="display:block" data-t="ctSub">Size uygun gün ve saati WhatsApp’tan yazın; kişisel hasta koordinatörünüz size dönüş yapsın.</p>
+        <p class="lead" style="display:block" data-t="ctSub">Size uygun gün ve saati WhatsApp’tan yazın, koordinatörümüz sizinle iletişime geçsin.</p>
         <div class="contact-cta">
           <a class="btn btn-primary" data-wa="contact" href="https://wa.me/905449547728"><svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg><span data-t="ctBtn">WhatsApp’tan yazın</span></a>
           <a class="btn btn-bordered" href="tel:+905449547728"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span data-t="call">Arayın</span></a>
@@ -913,7 +913,7 @@ const REVIEWS = [
 const INCLUDED = { tr:[['users','Alanında uzman, tecrübeli hekimler'],['flask','Kendi laboratuvarımızda hızlı üretim'],['gem','Birinci sınıf malzeme'],['scan','Tüm röntgenler klinikte çekilir'],['headset','7/24 ulaşabileceğiniz hasta koordinatörü'],['shield','Sınırlı hasta kabulü, size ayrılan zaman']] };
 const STEPS = { tr:[
   ['Bize yazın ya da arayın','WhatsApp, Instagram veya telefon; size hangisi kolaysa.'],
-  ['Koordinatörünüz size dönsün','Hasta koordinatörünüz sorularınızı yanıtlar ve randevunuzu ayarlar.'],
+  ['Koordinatörümüz sizinle iletişime geçsin','Hasta koordinatörümüz sorularınızı yanıtlar ve randevunuzu ayarlar.'],
   ['Muayene ve tedavi planı','Hekiminiz sizi muayene eder; size uygun seçenekleri ve fiyatı açıkça anlatır.'],
   ['Tedaviniz başlasın','Planınıza göre, alanında uzman hekimimizle.'],
   ['Kontrolleriniz devam etsin','Tedaviden sonra da sorularınız için hekiminize kolayca ulaşırsınız.']
@@ -939,7 +939,7 @@ const T = {
     inEyebrow:'Neden Dentvibe?', inTitle:'Her adımda yanınızdayız.', howTitle:'Süreç nasıl ilerliyor?',
     clEyebrow:'Kliniğimiz', clTitle:'Dentvibe’ı yakından tanıyın.', directions:'Yol tarifi alın', clPhotos:'Klinik fotoğrafları',
     cl1:'Avluya bakan geniş pencereli bekleme salonu', cl2:'Dr. Çağatay Kavaz klinik salonunda bir misafirle', cl3:'Kliniğin koridoru ve tedavi odaları', cl4:'Resepsiyon ve bekleme alanı', cl5:'Kliniğin bulunduğu sitenin avlusu',
-    ctTitle:'Randevunuzu hemen planlayalım.', ctSub:'Size uygun gün ve saati WhatsApp’tan yazın; kişisel hasta koordinatörünüz size dönüş yapsın.',
+    ctTitle:'Randevunuzu hemen planlayalım.', ctSub:'Size uygun gün ve saati WhatsApp’tan yazın, koordinatörümüz sizinle iletişime geçsin.',
     ctBtn:'WhatsApp’tan yazın', call:'Arayın', note:'WhatsApp mesajınız hazır olarak açılır; siz göndermeden hiçbir şey gönderilmez.',
     coord:'7/24 kişisel hasta koordinatörü', phone:'Telefon', directionsShort:'Yol tarifi', hours:'Çalışma saatleri', hoursVal:'Pzt–Cum 11:00–19:30 · Cmt 11:00–17:00', email:'E-posta',
     open:'Şu an açık', closed:'Şu an kapalı',
@@ -1113,9 +1113,9 @@ let lastL2 = '';
 function selectedIds() { return SERVICES.map(s => s.id).filter(id => selected.has(id)); }
 function renderDock(bump) {
   const ids = selectedIds();
-  const target = ids.length ? ids : [SERVICES[active].id];
-  dockWa.href = waLink(planMessage(target), 'dock');
-  const l2 = ids.length > 1 ? S().dockMany(ids.length) : loc(SERVICES.find(s => s.id === target[0]).title);
+  dockWa.href = waLink(planMessage(ids), 'dock');   /* nothing picked: a general appointment message */
+  const l2 = ids.length > 1 ? S().dockMany(ids.length) : ids.length === 1 ? loc(SERVICES.find(s => s.id === ids[0]).title) : '';
+  dockL2.hidden = !l2;
   if (l2 !== lastL2) {
     dockL2.textContent = l2;
     if (lastL2 && !reduceMotion.matches && dockL2.animate) dockL2.animate([{ transform: 'translateY(70%)', opacity: 0 }, { transform: 'none', opacity: .78 }], { duration: 480, easing: ease('--spring') });
