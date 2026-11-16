@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--
+  Dentvibe landing v2 — swipe, pick, message.
+  Design source: ./DESIGN.md (tokens synced with: NODE_PATH=<node_modules with js-yaml> node tools/design-md.mjs sync DESIGN.md index.html)
+  Content: published on dentvibe.com / dentvibe.com.tr (checked 2026-11-16). Edit the data blocks at the top of the <script>.
+  WhatsApp number and lead tag: CONFIG at the top of the <script>.
+-->
+<title>Dentvibe · Yeni gülüşünüzü seçin · WhatsApp’tan ücretsiz plan</title>
+<meta name="description" content="İstanbul’da diş implantı, E.max lamine, AuraThin™, zirkonyum kaplama ve gülüş tasarımı. Tedavilerinizi seçin, ücretsiz planınızı WhatsApp’tan alın. A+ implantlara 10 yıl garanti.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#07163C">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dentvibe">
+<meta property="og:title" content="Yeni gülüşünüzü seçin · Dentvibe İstanbul">
+<meta property="og:description" content="Tedavilere göz atın, seçin ve ücretsiz planınızı WhatsApp’tan alın.">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:image" content="https://www.dentvibe.com/wp-content/uploads/2026/02/dentvibe-main.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/cards/implants.webp" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dentist","name":"Dentvibe Dental Clinic","url":"https://www.dentvibe.com/","telephone":"+905449547728","email":"info@dentvibe.com","image":"https://www.dentvibe.com/wp-content/uploads/2026/02/dentvibe-main.jpg","availableLanguage":["en","tr"],"address":{"@type":"PostalAddress","streetAddress":"Fikirtepe, Hızırbey Cd. 25CJ","addressLocality":"Kadıköy, İstanbul","postalCode":"34720","addressCountry":"TR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"11:00","closes":"19:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"11:00","closes":"17:00"}],"sameAs":["https://www.instagram.com/dentvibe.international/","https://www.youtube.com/@dentvibe.international","https://www.tiktok.com/@dentvibe","https://www.facebook.com/profile.php?id=61550856635648"]}
+</script>
+<style>
+/* tokens:start — generated from DESIGN.md by tools/design-md.mjs, do not edit */
+:root {
+  --color-primary: #001957;
+  --color-secondary: #00BFE6;
+  --color-secondary-hover: #33CCEB;
+  --color-tertiary: #07163C;
+  --color-tertiary-raised: #0C1B40;
+  --color-neutral: #EFF2FB;
+  --color-surface: #FFFFFF;
+  --color-on-surface: #001957;
+  --color-on-surface-muted: #52638D;
+  --color-on-secondary: #07163C;
+  --color-on-tertiary: #FFFFFF;
+  --color-on-tertiary-muted: #A9B3CC;
+  --color-accent-text: #00728D;
+  --color-accent-on-dark: #5CD9F3;
+  --color-outline: #E6E8EE;
+  --color-outline-strong: #CCD1DD;
+  --font-figtree: "Figtree", system-ui, sans-serif;
+  --text-display: 3.5rem;
+  --text-display--line-height: 1.04;
+  --text-display--font-weight: 600;
+  --text-display--letter-spacing: -0.035em;
+  --text-display-compact: 2.25rem;
+  --text-display-compact--line-height: 1.06;
+  --text-display-compact--font-weight: 600;
+  --text-display-compact--letter-spacing: -0.03em;
+  --text-title-lg: 2rem;
+  --text-title-lg--line-height: 1.12;
+  --text-title-lg--font-weight: 600;
+  --text-title-lg--letter-spacing: -0.025em;
+  --text-title-md: 1.375rem;
+  --text-title-md--line-height: 1.2;
+  --text-title-md--font-weight: 600;
+  --text-title-md--letter-spacing: -0.015em;
+  --text-body-lg: 1.1875rem;
+  --text-body-lg--line-height: 1.47;
+  --text-body-lg--font-weight: 400;
+  --text-body-md: 1.0625rem;
+  --text-body-md--line-height: 1.47;
+  --text-body-md--font-weight: 400;
+  --text-body-sm: 0.9375rem;
+  --text-body-sm--line-height: 1.4;
+  --text-body-sm--font-weight: 400;
+  --text-footnote: 0.8125rem;
+  --text-footnote--line-height: 1.38;
+  --text-footnote--font-weight: 500;
+  --text-footnote--letter-spacing: 0.01em;
+  --text-label-lg: 1.0625rem;
+  --text-label-lg--line-height: 1.2;
+  --text-label-lg--font-weight: 600;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.3;
+  --text-eyebrow--font-weight: 600;
+  --text-eyebrow--letter-spacing: 0.08em;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-control: 52px;
+  --spacing-dock: 64px;
+  --spacing-section-compact: 64px;
+  --spacing-section: 96px;
+  --spacing-gutter: 24px;
+  --spacing-gutter-compact: 16px;
+  --spacing-container: 1200px;
+}
+/* tokens:end */
+
+/* ============ semantic roles ============ */
+:root{
+  color-scheme:light dark;
+  --font:var(--font-figtree),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --ink:var(--color-tertiary);
+  --ink-2:var(--color-tertiary-raised);
+  --on-ink:var(--color-on-tertiary);
+  --on-ink-2:var(--color-on-tertiary-muted);
+  --accent:var(--color-secondary);
+  --accent-hover:var(--color-secondary-hover);
+  --on-accent:var(--color-on-secondary);
+  --accent-ink:var(--color-accent-on-dark);
+  /* light tiles (follow the system appearance) */
+  --surface:var(--color-surface);
+  --mist:var(--color-neutral);
+  --card:var(--color-surface);
+  --label:var(--color-on-surface);
+  --label-2:var(--color-on-surface-muted);
+  --link:var(--color-accent-text);
+  --sep:var(--color-outline);
+  --sep-strong:var(--color-outline-strong);
+  --pressed:rgb(0 25 87 / .06);
+  --glass:rgb(255 255 255 / .72);
+  --glass-edge:rgb(255 255 255 / .75);
+  --glass-label:var(--color-on-surface);
+  --shadow-photo:0 18px 40px -18px rgb(7 22 60 / .35),0 2px 6px rgb(7 22 60 / .06);
+  --shadow-dock:0 12px 32px -8px rgb(7 22 60 / .35),0 2px 8px rgb(7 22 60 / .12);
+  /* motion — fallbacks; spring curves below where linear() is supported */
+  --spring:cubic-bezier(.2,.8,.2,1);
+  --spring-d:.56s;
+  --spring-bounce:cubic-bezier(.34,1.3,.64,1);
+  --spring-soft:cubic-bezier(.16,1,.3,1);
+  --gutter:var(--spacing-gutter-compact);
+  --card-w:min(76vw,340px);
+  --dock-space:calc(var(--spacing-dock) + 24px + env(safe-area-inset-bottom));
+  --z-dock:30;--z-sheet:60;--z-skip:80;
+}
+/* spring curves (critically damped / slight overshoot / soft), sampled from a damped spring */
+@supports (transition-timing-function:linear(0, 1)){
+  :root{
+    --spring:linear(0, 0.0374, 0.1231, 0.2296, 0.3401, 0.4453, 0.5405, 0.6237, 0.6948, 0.7544, 0.8036, 0.8439, 0.8765, 0.9027, 0.9237, 0.9403, 0.9534, 0.9638, 0.9719, 0.9783, 0.9832, 0.987, 0.99, 0.9923, 0.9941, 0.9955, 0.9965, 0.9974, 1);
+    --spring-bounce:linear(0, 0.0345, 0.1187, 0.2295, 0.3503, 0.4698, 0.5807, 0.679, 0.7628, 0.832, 0.8873, 0.9301, 0.9621, 0.9851, 1.0009, 1.011, 1.0168, 1.0194, 1.0199, 1.0189, 1.017, 1.0148, 1.0123, 1.01, 1.0078, 1.0059, 1.0044, 1.003, 1);
+    --spring-soft:linear(0, 0.0346, 0.1175, 0.2247, 0.3398, 0.4526, 0.5565, 0.6485, 0.7273, 0.793, 0.8464, 0.8889, 0.9221, 0.9473, 0.9661, 0.9798, 0.9895, 0.9961, 1.0004, 1.003, 1.0044, 1.0049, 1.005, 1.0047, 1.0042, 1.0036, 1.0031, 1.0025, 1);
+  }
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --surface:#0A1430;--mist:#050C22;--card:#0F1D45;
+    --label:#FFFFFF;--label-2:#A9B3CC;--link:#5CD9F3;
+    --sep:rgb(255 255 255 / .10);--sep-strong:rgb(255 255 255 / .22);
+    --pressed:rgb(255 255 255 / .06);
+    --glass:rgb(12 27 64 / .72);--glass-edge:rgb(255 255 255 / .14);--glass-label:#FFFFFF;
+    --shadow-photo:0 18px 40px -18px rgb(0 0 0 / .7),0 2px 6px rgb(0 0 0 / .3);
+    --shadow-dock:0 12px 32px -8px rgb(0 0 0 / .6),0 2px 8px rgb(0 0 0 / .3);
+  }
+}
+
+/* ============ base ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--ink);scroll-padding-top:16px}
+body{margin:0;background:var(--surface);color:var(--label);font-family:var(--font);font-size:var(--text-body-md);line-height:var(--text-body-md--line-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+a{-webkit-tap-highlight-color:transparent}
+h1,h2,h3{margin:0;font-weight:600;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+ul,ol{margin:0;padding:0;list-style:none}
+figure{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:16px;top:-100px;z-index:var(--z-skip);background:var(--surface);color:var(--label);padding:10px 16px;border-radius:var(--radius-sm);font-weight:600}
+.skip:focus{top:calc(12px + env(safe-area-inset-top))}
+.ic{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.ic-f{fill:currentColor;stroke:none}
+.num{font-variant-numeric:tabular-nums}
+.shell{width:100%;max-width:calc(var(--spacing-container) + 2 * var(--gutter));margin-inline:auto;padding-inline:max(var(--gutter),env(safe-area-inset-left)) max(var(--gutter),env(safe-area-inset-right))}
+.footnote{font-size:var(--text-footnote);line-height:var(--text-footnote--line-height);font-weight:var(--text-footnote--font-weight);letter-spacing:var(--text-footnote--letter-spacing)}
+
+/* ============ tiles: the colour change is the divider ============ */
+.tile{position:relative;padding-block:var(--spacing-section-compact)}
+.tile.ink{background:var(--ink);color:var(--on-ink)}
+.tile.mist{background:var(--mist)}
+.tile.surface{background:var(--surface)}
+.eyebrow{font-size:var(--text-eyebrow);line-height:var(--text-eyebrow--line-height);font-weight:600;letter-spacing:var(--text-eyebrow--letter-spacing);text-transform:uppercase;color:var(--link);margin-bottom:12px}
+.ink .eyebrow{color:var(--accent-ink)}
+.sec-head{max-width:40rem;margin-bottom:var(--spacing-xl)}
+.results-grid .sec-head{margin-bottom:0}
+.sec-head h2{font-size:var(--text-title-lg);line-height:var(--text-title-lg--line-height);letter-spacing:var(--text-title-lg--letter-spacing)}
+.sec-head .sub{margin-top:12px;color:var(--label-2)}
+.ink .sec-head .sub,.ink .muted{color:var(--on-ink-2)}
+.link{display:inline-flex;align-items:center;gap:6px;min-height:44px;color:var(--link);font-weight:600}
+.ink .link{color:var(--accent-ink)}
+.link .ic{width:1em;height:1em;transition:transform .3s var(--spring)}
+.link:hover .ic{transform:translate(2px,-2px)}
+.links-row{display:flex;flex-wrap:wrap;gap:4px 24px;margin-top:var(--spacing-md)}
+.wide-only{display:none}
+@media (min-width:1024px){.wide-only{display:flex}.narrow-only{display:none}}
+
+/* ============ buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--spacing-control);padding:0 var(--spacing-lg);border-radius:var(--radius-full);border:1px solid transparent;font-size:var(--text-label-lg);font-weight:600;line-height:1.2;white-space:nowrap;transition:background-color .2s ease-out,border-color .2s ease-out,transform .1s ease-out}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:var(--on-accent)}
+@media (hover:hover){.btn-primary:hover{background:var(--accent-hover)}}
+.btn-bordered{background:transparent;color:inherit;border-color:var(--sep-strong)}
+.ink .btn-bordered{border-color:rgb(255 255 255 / .28)}
+@media (hover:hover){.btn-bordered:hover{border-color:currentColor}}
+.btn-icon{width:var(--spacing-control);padding:0}
+
+/* ============ segmented control (language) ============ */
+.seg{display:inline-flex;padding:3px;border-radius:var(--radius-full);background:rgb(255 255 255 / .1)}
+.seg button{min-width:44px;height:34px;padding:0 12px;border-radius:var(--radius-full);font-size:var(--text-footnote);font-weight:600;color:var(--on-ink-2);transition:background-color .25s var(--spring),color .25s}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--color-primary)}
+
+/* ============ hero ============ */
+.hero{min-height:100svh;display:flex;flex-direction:column;padding:0 0 var(--dock-space);overflow:hidden;isolation:isolate}
+.glow{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.glow i{position:absolute;border-radius:50%;will-change:transform}
+.glow i:nth-child(1){width:110vmax;height:110vmax;left:-45vmax;top:-60vmax;background:radial-gradient(closest-side,rgb(0 191 230 / .30),rgb(0 191 230 / 0));animation:drift-a 26s ease-in-out infinite alternate}
+.glow i:nth-child(2){width:90vmax;height:90vmax;right:-50vmax;top:10vmax;background:radial-gradient(closest-side,rgb(40 90 255 / .22),rgb(40 90 255 / 0));animation:drift-b 32s ease-in-out infinite alternate}
+.glow i:nth-child(3){width:70vmax;height:70vmax;left:10vmax;bottom:-55vmax;background:radial-gradient(closest-side,rgb(92 217 243 / .16),rgb(92 217 243 / 0));animation:drift-a 38s ease-in-out infinite alternate-reverse}
+@keyframes drift-a{to{transform:translate3d(14vmax,10vmax,0) scale(1.08)}}
+@keyframes drift-b{to{transform:translate3d(-12vmax,-8vmax,0) scale(.94)}}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:calc(14px + env(safe-area-inset-top));padding-bottom:6px}
+.brand img{width:118px;height:auto}
+.hero-grid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding-block:8px 0}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:2px 14px;color:var(--on-ink-2)}
+.proof a{display:inline-flex;align-items:center;gap:6px;min-height:32px}
+.proof strong{color:var(--on-ink);font-weight:600}
+.stars{display:inline-flex;gap:1px;color:#FFC94A}
+.stars .ic{width:13px;height:13px}
+.hero h1{font-size:var(--text-display-compact);line-height:var(--text-display-compact--line-height);letter-spacing:var(--text-display-compact--letter-spacing);margin-top:6px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .ln:last-child>span{background:linear-gradient(92deg,#fff 0%,#9DEBFA 55%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--on-ink-2);margin-top:12px;max-width:30rem}
+.hero-actions{display:none}
+
+/* ---- the deck ---- */
+.deck-wrap{position:relative;margin-inline:calc(-1 * max(var(--gutter),env(safe-area-inset-left)))}
+.deck{display:grid;grid-auto-flow:column;grid-auto-columns:var(--card-w);gap:10px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding:10px calc((100% - var(--card-w)) / 2) 14px;scrollbar-width:none;position:relative;-webkit-overflow-scrolling:touch}
+.deck::-webkit-scrollbar{display:none}
+.deck:focus-visible{outline:none}
+.deck:focus-visible .svc.is-active{outline:2px solid var(--accent);outline-offset:4px}
+.svc{--p:0;--a:0;scroll-snap-align:center;scroll-snap-stop:always;position:relative;display:flex;flex-direction:column;border-radius:var(--radius-xl);background:var(--ink-2);color:var(--on-ink);overflow:hidden;transform:perspective(1000px) rotateY(calc(var(--p) * -7deg)) scale(calc(1 - var(--a) * .075));opacity:calc(1 - var(--a) * .45);transform-origin:50% 60%;will-change:transform;box-shadow:0 0 0 1px rgb(255 255 255 / .06) inset;transition:box-shadow .35s var(--spring)}
+.svc.is-selected{box-shadow:0 0 0 2px var(--accent),0 20px 50px -20px rgb(0 191 230 / .55)}
+.svc-media{position:relative;aspect-ratio:3/2;overflow:hidden;background:#0a1633;cursor:pointer}
+.svc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translate3d(calc(var(--p) * -5%),0,0) scale(1.12);will-change:transform}
+.svc-media::after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(to top,rgb(12 27 64 / .8),rgb(12 27 64 / 0));pointer-events:none}
+.badge{position:absolute;left:12px;top:12px;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--radius-full);background:rgb(7 22 60 / .66);color:#fff;font-size:var(--text-footnote);font-weight:600}
+.badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.add{position:absolute;right:10px;top:10px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 14px 0 10px;border-radius:var(--radius-full);background:#fff;color:var(--color-primary);font-size:var(--text-footnote);font-weight:700;box-shadow:0 6px 18px -6px rgb(0 0 0 / .45);transition:background-color .3s var(--spring),color .3s,transform .12s ease-out}
+.add::before{content:"";position:absolute;inset:-6px}
+.add:active{transform:scale(.94)}
+.add .ic{width:20px;height:20px;stroke-width:2.4}
+.add .i-check{display:none}
+.add .i-check path{stroke-dasharray:24;stroke-dashoffset:24}
+.add[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.add[aria-pressed="true"] .i-plus{display:none}
+.add[aria-pressed="true"] .i-check{display:block}
+.add[aria-pressed="true"] .i-check path{animation:draw .45s var(--spring) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.svc-body{display:flex;flex-direction:column;gap:5px;padding:12px 16px 16px;transform:translate3d(calc(var(--p) * 14px),0,0)}
+.kicker{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:var(--text-eyebrow--letter-spacing);text-transform:uppercase;color:var(--accent-ink)}
+.svc-title{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.svc h3{font-size:var(--text-title-md);line-height:var(--text-title-md--line-height);letter-spacing:var(--text-title-md--letter-spacing)}
+.svc .line{font-size:var(--text-body-sm);line-height:var(--text-body-sm--line-height);color:var(--on-ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.facts{position:absolute;left:10px;right:10px;bottom:10px;z-index:1;display:flex;flex-wrap:wrap;gap:6px;pointer-events:none}
+.facts li{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border-radius:var(--radius-full);background:rgb(7 22 60 / .66);font-size:var(--text-footnote);font-weight:600;color:#fff}
+.facts .ic{width:14px;height:14px;color:var(--accent-ink)}
+.more{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;flex:none;border-radius:50%;color:var(--on-ink-2);background:rgb(255 255 255 / .06);transition:background-color .2s,color .2s}
+.more:hover{color:#fff;background:rgb(255 255 255 / .12)}
+.more .ic{width:16px;height:16px}
+.deck-ui{display:flex;align-items:center;justify-content:center;gap:14px;padding-inline:var(--gutter)}
+.dots{display:flex;align-items:center;gap:2px}
+.dots button{width:24px;height:32px;display:grid;place-items:center}
+.dots button::before{content:"";width:7px;height:7px;border-radius:var(--radius-full);background:rgb(255 255 255 / .28);transition:width .45s var(--spring),background-color .3s}
+.dots button.on::before{width:20px;background:#fff}
+.dots button.picked::before{background:var(--accent)}
+.nav{display:none;width:44px;height:44px;border-radius:50%;place-items:center;color:var(--on-ink);border:1px solid rgb(255 255 255 / .22);transition:background-color .2s,opacity .2s}
+.nav:hover{background:rgb(255 255 255 / .08)}
+.nav:disabled{opacity:.3;cursor:default}
+.nav .ic{width:20px;height:20px}
+.hint{margin-top:2px;text-align:center;color:var(--on-ink-2);transition:opacity .4s,transform .4s var(--spring)}
+.hint.gone{opacity:0;transform:translateY(-4px)}
+
+/* ---- hero entrance ---- */
+.js .hero [data-in]{opacity:0;transform:translateY(14px);animation:rise var(--spring-d) var(--spring) forwards;animation-delay:calc(120ms + var(--d,0) * 70ms)}
+.js .hero h1 .ln>span{transform:translateY(105%);animation:word .9s var(--spring-soft) forwards;animation-delay:calc(160ms + var(--d,0) * 90ms)}
+.js .deck{animation:deck-in 1.1s var(--spring-soft) .32s backwards}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes word{to{transform:none}}
+@keyframes deck-in{from{opacity:0;transform:translate3d(56px,0,0)}}
+
+/* ============ dock: the single primary action ============ */
+.dock{position:fixed;z-index:var(--z-dock);left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:calc(12px + env(safe-area-inset-bottom));display:flex;gap:6px;padding:var(--spacing-sm);border-radius:var(--radius-full);background:var(--glass);-webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);border:1px solid var(--glass-edge);box-shadow:var(--shadow-dock);color:var(--glass-label);transition:transform .5s var(--spring),opacity .3s}
+.js .dock{animation:dock-in .8s var(--spring-soft) .7s backwards}
+@keyframes dock-in{from{transform:translateY(130%)}}
+.dock.away{transform:translateY(140%);opacity:0;pointer-events:none}
+.dock .btn{min-height:48px}
+.dock-wa{flex:1;min-width:0;justify-content:flex-start;padding:0 8px 0 18px;position:relative;overflow:hidden}
+.dock-wa .ic{width:22px;height:22px}
+.dock-text{display:flex;flex-direction:column;min-width:0;line-height:1.15;flex:1}
+.dock-l1{font-size:.9375rem;font-weight:700}
+.dock-l2{font-size:var(--text-footnote);font-weight:600;opacity:.78;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.count{min-width:28px;height:28px;padding:0 8px;border-radius:var(--radius-full);display:grid;place-items:center;background:var(--color-tertiary);color:#fff;font-size:var(--text-footnote);font-weight:700;margin-left:auto}
+.count[hidden]{display:none}
+.count.bump{animation:bump .5s var(--spring-bounce)}
+@keyframes bump{0%{transform:scale(.6)}100%{transform:scale(1)}}
+.dock-wa::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgb(255 255 255 / .55) 50%,transparent 70%);transform:translateX(-120%);pointer-events:none}
+.js .dock-wa.shine::after{animation:shine 1.3s ease-in-out .1s 1}
+@keyframes shine{to{transform:translateX(120%)}}
+.dock .btn-icon{width:48px;background:transparent;border-color:var(--sep-strong);color:var(--glass-label)}
+
+/* ============ section reveal ============ */
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .9s var(--spring-soft);transition-delay:calc(var(--i,0) * 70ms)}
+.js [data-reveal].in{opacity:1;transform:none}
+
+/* ============ results: before / after ============ */
+.results-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--spacing-lg)}
+.results-grid>*,.contact-grid>*,.incl-wrap>*,.hero-grid>*{min-width:0}
+.cmp{position:relative;aspect-ratio:3/2;border-radius:var(--radius-lg);overflow:hidden;background:#0a1633;box-shadow:var(--shadow-photo);touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;transition:opacity .35s ease-out}
+.cmp.swap img{opacity:0}
+.cmp-clip{position:absolute;inset:0;overflow:hidden}
+.cmp-divider{position:absolute;inset:0;pointer-events:none}
+.cmp-divider::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 12px rgb(0 0 0 / .25)}
+.cmp-knob{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:#fff;color:var(--color-primary);display:grid;place-items:center;box-shadow:0 6px 20px rgb(0 0 0 / .25);transition:transform .25s var(--spring),background-color .2s}
+.cmp-knob .ic{width:20px;height:20px;stroke-width:2.2}
+.cmp.held .cmp-knob{transform:scale(1.12);background:rgb(255 255 255 / .55);-webkit-backdrop-filter:blur(12px) saturate(1.5);backdrop-filter:blur(12px) saturate(1.5)}
+.cmp:has(.cmp-range:focus-visible) .cmp-knob{outline:2px solid #fff;outline-offset:3px}
+.cmp-tag{position:absolute;top:12px;padding:5px 10px;border-radius:var(--radius-full);background:rgb(7 22 60 / .6);color:#fff;font-size:var(--text-footnote);font-weight:600;pointer-events:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.cmp-tag.l{left:12px}.cmp-tag.r{right:12px}
+.cmp-cap{display:flex;align-items:center;gap:8px;margin-top:14px;color:var(--label-2)}
+.cmp-cap strong{color:var(--label);font-weight:600}
+.cases{display:grid;grid-auto-flow:column;grid-auto-columns:96px;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px var(--gutter) 10px;margin-inline:calc(-1 * var(--gutter));scrollbar-width:none;scroll-padding-inline:var(--gutter)}
+.cases::-webkit-scrollbar{display:none}
+.case{scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;text-align:left;font-size:var(--text-footnote);font-weight:600;color:var(--label-2)}
+.case img{width:96px;height:64px;object-fit:cover;border-radius:12px;transition:transform .3s var(--spring),box-shadow .3s}
+.case[aria-pressed="true"]{color:var(--label)}
+.case[aria-pressed="true"] img{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--accent)}
+.case:active img{transform:scale(.95)}
+
+/* ============ doctors ============ */
+.docs{display:grid;grid-auto-flow:column;grid-auto-columns:min(62vw,230px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--gutter) 16px;margin-inline:calc(-1 * var(--gutter));scroll-padding-inline:var(--gutter);scrollbar-width:none}
+.docs::-webkit-scrollbar{display:none}
+.doc{scroll-snap-align:start;text-align:left;display:flex;flex-direction:column;border-radius:var(--radius-lg);background:var(--card);overflow:hidden;box-shadow:var(--shadow-photo);transition:transform .35s var(--spring)}
+.doc:active{transform:scale(.97);transition-duration:.1s}
+.doc-ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#dfe6f5}
+.doc-ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--spring-soft)}
+@media (hover:hover){.doc:hover .doc-ph img{transform:scale(1.04)}}
+.doc-tag{position:absolute;left:10px;top:10px;padding:5px 10px;border-radius:var(--radius-full);background:var(--color-tertiary);color:#fff;font-size:var(--text-footnote);font-weight:600}
+.doc-txt{display:flex;flex-direction:column;gap:2px;padding:12px 14px 14px}
+.doc-name{font-weight:600;font-size:1.0625rem;letter-spacing:-.01em}
+.doc-role{font-size:var(--text-body-sm);line-height:1.3;color:var(--label-2)}
+.doc-open{display:inline-flex;align-items:center;gap:4px;margin-top:8px;font-size:var(--text-footnote);font-weight:700;color:var(--link)}
+.team{margin-top:var(--spacing-xl)}
+.team img{width:100%;border-radius:var(--radius-lg);aspect-ratio:16/9;object-fit:cover;box-shadow:var(--shadow-photo)}
+.team figcaption{margin-top:10px;color:var(--label-2)}
+
+/* ---- bottom sheet ---- */
+dialog.sheet{position:fixed;inset:auto 0 0;margin:0 auto;width:100%;max-width:560px;max-height:none;padding:0;border:0;background:transparent;color:var(--label);overflow:visible}
+dialog.sheet::backdrop{background:rgb(4 10 28 / .5);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);opacity:0;transition:opacity .3s}
+dialog.sheet.open::backdrop{opacity:1}
+.sheet-panel{position:relative;max-height:88svh;overflow:auto;overscroll-behavior:contain;background:var(--card);border-radius:var(--radius-xl) var(--radius-xl) 0 0;padding:10px var(--spacing-lg) calc(var(--spacing-lg) + env(safe-area-inset-bottom));transform:translateY(100%);box-shadow:0 -12px 40px rgb(0 0 0 / .25)}
+.grab{display:block;width:100%;height:28px;cursor:grab;touch-action:none}
+.grab::before{content:"";display:block;width:40px;height:5px;margin:4px auto 0;border-radius:3px;background:var(--sep-strong)}
+.sheet-close{position:absolute;right:14px;top:14px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--mist);color:var(--label-2)}
+.sheet-close .ic{width:18px;height:18px}
+.sheet-top{display:flex;gap:16px;align-items:center;margin-bottom:16px;touch-action:none}
+.sheet-top img{width:84px;height:104px;object-fit:cover;border-radius:16px;flex:none}
+.sheet-top h3{font-size:var(--text-title-md);letter-spacing:-.015em;padding-right:36px}
+.sheet-top p{color:var(--label-2);margin-top:2px;font-size:var(--text-body-sm)}
+.creds{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.creds li{padding:6px 10px;border-radius:var(--radius-full);background:var(--mist);font-size:var(--text-footnote);font-weight:600}
+.sheet-bio{color:var(--label-2);margin-bottom:20px}
+.sheet-actions{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+.sheet-actions .btn{white-space:normal;text-align:center}
+.sheet-actions .link{justify-content:center}
+
+/* ============ reviews ============ */
+.ratings{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:var(--spacing-lg)}
+.rating{display:inline-flex;align-items:center;gap:10px;padding:10px 16px 10px 12px;border-radius:var(--radius-full);background:var(--ink-2);transition:background-color .2s}
+.rating:hover{background:#13265a}
+.rating b{font-size:1.25rem;font-weight:700;letter-spacing:-.02em}
+.rating small{display:block;color:var(--on-ink-2);font-size:var(--text-footnote);font-weight:500}
+.revs{display:grid;grid-auto-flow:column;grid-auto-columns:min(84vw,340px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--gutter) 12px;margin-inline:calc(-1 * var(--gutter));scroll-padding-inline:var(--gutter);scrollbar-width:none}
+.revs::-webkit-scrollbar{display:none}
+.rev{scroll-snap-align:start;display:flex;flex-direction:column;gap:14px;padding:var(--spacing-lg);border-radius:var(--radius-lg);background:var(--ink-2)}
+.rev blockquote{margin:0;font-size:1.0625rem;line-height:1.5;color:var(--on-ink)}
+.rev blockquote::before{content:"“";display:block;font-size:2.75rem;line-height:.6;height:.32em;color:var(--accent);font-weight:700}
+.rev figcaption{margin-top:auto;display:flex;align-items:center;gap:12px}
+.rev img{width:44px;height:44px;border-radius:50%;object-fit:cover;background:#1b2b57}
+.rev cite{font-style:normal;font-weight:600;display:block}
+.rev .muted{font-size:var(--text-footnote)}
+.rev .stars .ic{width:14px;height:14px}
+
+/* ============ included ============ */
+.stats{display:grid;gap:12px;margin-bottom:var(--spacing-xl)}
+.stat{padding:20px var(--spacing-lg);border-radius:var(--radius-lg);background:var(--mist)}
+.stat b{display:block;font-size:2.25rem;line-height:1;font-weight:700;letter-spacing:-.04em;color:var(--label);font-variant-numeric:tabular-nums}
+.stat b em{font-style:normal;color:var(--link)}
+.stat p{margin-top:8px;color:var(--label-2)}
+.incl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:var(--spacing-2xl)}
+.incl li{display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:var(--radius-md);border:1px solid var(--sep);font-weight:600;font-size:var(--text-body-sm);line-height:1.3}
+.incl .ic{width:26px;height:26px;color:var(--link);stroke-width:1.6}
+.steps-title{font-size:var(--text-title-md);letter-spacing:-.015em;margin-bottom:var(--spacing-md)}
+.steps{display:grid;gap:0;counter-reset:s}
+.steps li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:4px 14px;padding-bottom:22px}
+.steps li::before{counter-increment:s;content:counter(s);grid-row:1 / span 2;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--color-tertiary);color:#fff;font-weight:700;font-variant-numeric:tabular-nums;position:relative;z-index:1}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:19.5px;top:40px;bottom:0;width:1px;background:var(--sep-strong)}
+.steps b{font-weight:600;align-self:end}
+.steps span{color:var(--label-2);font-size:var(--text-body-sm)}
+
+/* ============ clinic ============ */
+.photos{display:grid;grid-auto-flow:column;grid-auto-columns:min(86vw,520px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--gutter) 12px;margin-inline:calc(-1 * var(--gutter));scroll-padding-inline:var(--gutter);scrollbar-width:none}
+.photos::-webkit-scrollbar{display:none}
+.photos figure{scroll-snap-align:start}
+.photos img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius-lg)}
+.photos figure.tall img{aspect-ratio:3/2;object-position:50% 30%}
+.rail-wrap{position:relative}
+.rail-nav{display:none;gap:8px;justify-content:flex-end;margin-bottom:12px}
+.rail-nav button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--sep-strong);color:var(--label);transition:background-color .2s,opacity .2s}
+.ink .rail-nav button{border-color:rgb(255 255 255 / .22);color:var(--on-ink)}
+.rail-nav button:hover{background:var(--pressed)}
+.rail-nav button:disabled{opacity:.3;cursor:default}
+.rail-nav .ic{width:20px;height:20px}
+
+/* ============ contact ============ */
+.contact{padding-bottom:calc(var(--spacing-section-compact) + var(--dock-space))}
+.contact h2{font-size:var(--text-display-compact);line-height:var(--text-display-compact--line-height);letter-spacing:var(--text-display-compact--letter-spacing)}
+.contact-cta{display:flex;flex-wrap:wrap;gap:10px;margin:var(--spacing-lg) 0 12px}
+.contact-cta .btn-primary{flex:1 1 0;min-width:0}
+.note{color:var(--on-ink-2);max-width:34rem}
+.group{margin-top:var(--spacing-xl);border-radius:var(--radius-md);background:var(--ink-2);overflow:hidden}
+.group li+li .row::before{content:"";position:absolute;top:0;left:52px;right:0;border-top:1px solid rgb(255 255 255 / .08)}
+.row{position:relative;display:flex;align-items:center;gap:14px;min-height:60px;padding:10px 16px;transition:background-color .15s}
+a.row:hover,a.row:active{background:rgb(255 255 255 / .05)}
+.row-lead{width:22px;height:22px;color:var(--accent-ink)}
+.row-text{flex:1;min-width:0;display:flex;flex-direction:column}
+.row-title{font-weight:600}
+.row-sub{font-size:var(--text-body-sm);color:var(--on-ink-2)}
+.row-trail{color:var(--on-ink-2);width:18px;height:18px}
+.state{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-footnote);font-weight:600;color:var(--on-ink-2);white-space:nowrap}
+.state i{width:8px;height:8px;border-radius:50%;background:#F59E0B}
+.state.open i{background:#22C55E;box-shadow:0 0 0 0 rgb(34 197 94 / .6);animation:ping 2.4s ease-out 3}
+@keyframes ping{to{box-shadow:0 0 0 8px rgb(34 197 94 / 0)}}
+.linkcols{display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-xl) var(--spacing-lg);margin-top:var(--spacing-2xl)}
+.linkcols h3{font-size:var(--text-eyebrow);letter-spacing:var(--text-eyebrow--letter-spacing);text-transform:uppercase;color:var(--on-ink-2);font-weight:600;margin-bottom:6px}
+.linkcols a{display:flex;align-items:center;min-height:40px;color:var(--on-ink);font-weight:500;transition:color .2s}
+.linkcols a:hover{color:var(--accent-ink)}
+.social{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.social a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ink-2);min-height:0}
+.social .ic{width:20px;height:20px}
+.legal{margin-top:var(--spacing-2xl);padding-top:var(--spacing-lg);border-top:1px solid rgb(255 255 255 / .1);display:flex;flex-direction:column;gap:6px;color:var(--on-ink-2)}
+.legal a{text-decoration:underline;text-underline-offset:3px}
+.slogan{display:block;margin-top:var(--spacing-lg);width:140px;opacity:.9}
+
+/* ============ short phones: keep the hero on one screen ============ */
+@media (max-width:759px) and (max-height:740px){
+  .hero h1{font-size:1.9rem}
+  .lead{display:none}
+  .hero-grid{gap:12px}
+  .svc .line{-webkit-line-clamp:1}
+  .hint{display:none}
+}
+@media (max-width:359px){ .facts li:nth-child(2){display:none} }
+
+/* ============ regular width ============ */
+@media (min-width:760px){
+  :root{--gutter:var(--spacing-gutter);--card-w:360px}
+  .tile{padding-block:var(--spacing-section)}
+  .sec-head h2{font-size:2.5rem;line-height:1.08}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .incl{grid-template-columns:repeat(3,1fr)}
+  .rail-nav{display:flex}
+  .nav{display:grid}
+  .linkcols{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:1024px){
+  .hero{padding-bottom:calc(var(--dock-space) + 16px)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:var(--spacing-2xl)}
+  .hero h1{font-size:var(--text-display);line-height:var(--text-display--line-height);letter-spacing:var(--text-display--letter-spacing)}
+  .lead{font-size:var(--text-body-lg);line-height:var(--text-body-lg--line-height)}
+  .deck-wrap{margin-inline:0 calc(-1 * max(var(--gutter),(100vw - var(--spacing-container)) / 2))}
+  .deck{padding:10px calc(100% - var(--card-w) - 4px) 14px 4px;-webkit-mask-image:linear-gradient(90deg,#000 0,#000 72%,transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 72%,transparent 100%)}
+  .svc{scroll-snap-align:start;opacity:calc(1 - var(--a) * .2)}
+  .deck-ui{justify-content:flex-start;padding-inline:0}
+  .hint{text-align:left}
+  .results-grid{grid-template-columns:minmax(0,4fr) minmax(0,6fr);align-items:start;gap:var(--spacing-3xl)}
+  .results-grid .sec-head{position:sticky;top:48px}
+  .cases{margin-inline:0;padding-inline:4px;scroll-padding-inline:4px}
+  .docs{grid-auto-columns:250px;gap:16px}
+  .incl-wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--spacing-3xl);align-items:start}
+  .contact-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--spacing-3xl);align-items:start}
+  .contact h2{font-size:var(--text-display);line-height:var(--text-display--line-height);letter-spacing:var(--text-display--letter-spacing)}
+  .linkcols{margin-top:0;grid-template-columns:1fr 1fr}
+  .dock{left:50%;right:auto;width:min(520px,calc(100% - 48px));transform:translateX(-50%)}
+  .dock.away{transform:translate(-50%,140%)}
+  @keyframes dock-in{from{transform:translate(-50%,130%)}}
+  dialog.sheet{inset:0;margin:auto;height:fit-content}
+  .sheet-panel{border-radius:var(--radius-xl);transform:translateY(24px) scale(.97);opacity:0}
+  .grab{visibility:hidden;height:12px}
+}
+
+/* ============ accessibility preferences ============ */
+@media (prefers-reduced-motion:reduce){
+  .glow i{animation:none!important}
+  .svc{transform:none!important;opacity:1!important}
+  .svc-media img{transform:none!important}
+  .svc-body{transform:none!important}
+  .js .hero [data-in],.js .hero h1 .ln>span,.js .deck,.js .dock{animation:none!important;opacity:1;transform:none}
+  .js [data-reveal]{transform:none!important;transition:opacity .3s ease-out}
+  .dock-wa::after{display:none}
+  .state.open i{animation:none}
+  *,*::before,*::after{scroll-behavior:auto!important}
+}
+@media (prefers-reduced-transparency:reduce){
+  .dock{background:var(--card);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .badge,.cmp-tag{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgb(7 22 60 / .85)}
+  .cmp.held .cmp-knob{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media (prefers-contrast:more){
+  :root{--sep:var(--sep-strong);--label-2:var(--label)}
+  .dock{background:var(--card);-webkit-backdrop-filter:none;backdrop-filter:none;border-color:var(--label)}
+  .svc .line,.lead,.proof{color:#fff}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-lr" viewBox="0 0 24 24"><path d="m9 18-6-6 6-6"/><path d="m15 6 6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-feather" viewBox="0 0 24 24"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 9.5c0-1.4 1.8-2.5 4-2.5s4 1.1 4 2.5c0 2-1 3-1.5 6.5h-5C9 12.5 8 11.5 8 9.5z"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r=".6" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.4 4.6 5 5"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+</svg>
+
+<a class="skip" href="#deck" data-t="skip">Tedavilere geç</a>
+
+<main>
+  <!-- ======================= 1 · HERO: swipe, pick ======================= -->
+  <section class="hero tile ink" id="top" aria-labelledby="title">
+    <div class="glow" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="topbar shell" data-in style="--d:0">
+      <a class="brand" href="https://www.dentvibe.com/" data-href="site" target="_blank" rel="noopener"><img src="assets/brand/logo-light.png" alt="Dentvibe, good smiles only" width="280" height="82"></a>
+      <div class="seg" role="group" aria-label="Dil" data-t-aria="lang">
+        <button type="button" data-lang="tr" lang="tr" aria-pressed="true" aria-label="Türkçe">TR</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+      </div>
+    </div>
+
+    <div class="hero-grid shell">
+      <div class="hero-copy">
+        <p class="proof footnote" data-in style="--d:1">
+          <a href="https://maps.app.goo.gl/Rwm2aTUgNevUKxyv9" target="_blank" rel="noopener">
+            <span class="stars" aria-hidden="true"><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg></span>
+            <span><strong>5.0</strong> <span data-t="onGoogle">Google’da</span></span>
+          </a>
+          <a href="https://ie.trustpilot.com/review/istanbuldentalcare.com" target="_blank" rel="noopener"><span><strong data-t="excellent">Mükemmel</strong> <span data-t="onTrustpilot">Trustpilot’ta</span></span></a>
+        </p>
+        <h1 id="title"><span class="ln"><span style="--d:0" data-t="h1a">Yeni gülüşünüzü</span></span> <span class="ln"><span style="--d:1" data-t="h1b">seçin.</span></span></h1>
+        <div data-in style="--d:3"><p class="lead" data-t="lead">Tedavilere göz atın, + ile seçin, ücretsiz planınızı WhatsApp’tan alın.</p></div>
+      </div>
+
+      <div class="deck-wrap">
+        <div class="deck" id="deck" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Tedaviler" data-t-aria="deck"></div>
+        <div class="deck-ui" data-in style="--d:5">
+          <button class="nav" type="button" id="prev" aria-label="Önceki tedavi" data-t-aria="prev"><svg class="ic"><use href="#i-l"/></svg></button>
+          <div class="dots" id="dots"></div>
+          <button class="nav" type="button" id="next" aria-label="Sonraki tedavi" data-t-aria="next"><svg class="ic"><use href="#i-r"/></svg></button>
+        </div>
+        <div data-in style="--d:6"><p class="hint footnote" id="hint" data-t="hint">Birden fazla tedavi eklemek için + simgesine dokunun.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 2 · REAL RESULTS ======================= -->
+  <section class="tile surface" id="results" aria-labelledby="results-title">
+    <div class="shell results-grid">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow" data-t="resEyebrow">Gerçek sonuçlar</p>
+        <h2 id="results-title" data-t="resTitle">Kendi hastalarımızdan öncesi ve sonrası.</h2>
+        <p class="sub" data-t="resSub">Karşılaştırmak için çizgiyi kaydırın. Her sonuç farklıdır; planınız dişlerinize göre hazırlanır.</p>
+        <div class="links-row wide-only">
+          <a class="link" href="https://www.dentvibe.com/smile-gallery" data-href="gallery" target="_blank" rel="noopener"><span data-t="resGallery">Tüm gülüş galerisini görün</span><svg class="ic"><use href="#i-out"/></svg></a>
+        </div>
+      </div>
+      <div data-reveal style="--i:1">
+        <figure class="cmp" id="cmp">
+          <img class="cmp-after" src="assets/cases/fatima-after.webp" alt="" width="630" height="420" loading="lazy" decoding="async">
+          <div class="cmp-clip"><img class="cmp-before" src="assets/cases/fatima-before.webp" alt="" width="630" height="420" loading="lazy" decoding="async"></div>
+          <div class="cmp-divider" aria-hidden="true"><span class="cmp-knob"><svg class="ic"><use href="#i-lr"/></svg></span></div>
+          <span class="cmp-tag l" aria-hidden="true" data-t="before">Öncesi</span>
+          <span class="cmp-tag r" aria-hidden="true" data-t="after">Sonrası</span>
+          <input class="cmp-range sr-only" type="range" min="0" max="100" value="50" aria-label="Öncesi ve sonrası karşılaştırması" data-t-aria="cmpRange">
+        </figure>
+        <p class="cmp-cap footnote" id="cmpCap" aria-live="polite"></p>
+        <div class="cases" id="cases" role="group" aria-label="Hasta vakaları" data-t-aria="cases"></div>
+        <div class="links-row narrow-only" style="margin-top:4px"><a class="link" href="https://www.dentvibe.com/smile-gallery" data-href="gallery" target="_blank" rel="noopener"><span data-t="resGallery">Tüm gülüş galerisini görün</span><svg class="ic"><use href="#i-out"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 3 · DOCTORS ======================= -->
+  <section class="tile mist" id="doctors" aria-labelledby="doctors-title">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow" data-t="docEyebrow">Doktorlarınız</p>
+        <h2 id="doctors-title" data-t="docTitle">Her biri kendi alanında uzman.</h2>
+        <p class="sub" data-t="docSub">Her tedavi planı kurucumuz Dr. Çağatay Kavaz’ın gözetimindedir. Daha fazlası veya ücretsiz görüşme için bir doktora dokunun.</p>
+      </div>
+      <div class="rail-wrap" data-reveal style="--i:1">
+        <div class="rail-nav" id="docs-nav"><button type="button" data-rail-prev aria-label="Önceki" data-t-aria="prevGen"><svg class="ic"><use href="#i-l"/></svg></button><button type="button" data-rail-next aria-label="Sonraki" data-t-aria="nextGen"><svg class="ic"><use href="#i-r"/></svg></button></div>
+        <div class="docs" id="docs" data-rail></div>
+      </div>
+      <figure class="team" data-reveal>
+        <img src="assets/clinic/team.webp" alt="Dentvibe doktorları klinikte bir arada" data-t-alt="teamAlt" width="1200" height="674" loading="lazy" decoding="async">
+        <figcaption class="footnote"><span data-t="teamCap">Dentvibe ekibi, Kadıköy, İstanbul.</span> <a class="link" href="https://www.dentvibe.com/team" data-href="team" target="_blank" rel="noopener" style="min-height:0"><span data-t="allDoctors">Tüm doktorlar</span><svg class="ic"><use href="#i-out"/></svg></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================= 4 · REVIEWS ======================= -->
+  <section class="tile ink" id="reviews" aria-labelledby="reviews-title">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow" data-t="revEyebrow">Hasta yorumları</p>
+        <h2 id="reviews-title" data-t="revTitle">Hastalarımız gülümseyerek ayrılıyor.</h2>
+      </div>
+      <div class="ratings" data-reveal style="--i:1">
+        <a class="rating" href="https://maps.app.goo.gl/Rwm2aTUgNevUKxyv9" target="_blank" rel="noopener">
+          <span><b class="num">5.0</b></span>
+          <span><span class="stars" aria-hidden="true"><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg><svg class="ic ic-f"><use href="#i-star"/></svg></span><small data-t="googleReviews">Google yorumları</small></span>
+        </a>
+        <a class="rating" href="https://ie.trustpilot.com/review/istanbuldentalcare.com" target="_blank" rel="noopener">
+          <span><b data-t="excellent">Mükemmel</b><small>Trustpilot</small></span>
+        </a>
+      </div>
+      <div class="rail-wrap" data-reveal style="--i:2">
+        <div class="rail-nav"><button type="button" data-rail-prev aria-label="Önceki" data-t-aria="prevGen"><svg class="ic"><use href="#i-l"/></svg></button><button type="button" data-rail-next aria-label="Sonraki" data-t-aria="nextGen"><svg class="ic"><use href="#i-r"/></svg></button></div>
+        <div class="revs" id="revs" data-rail tabindex="0" role="region" aria-label="Hasta yorumları" data-t-aria="revEyebrow"></div>
+      </div>
+      <div class="links-row">
+        <a class="link" href="https://www.dentvibe.com/testimonials" data-href="reviews" target="_blank" rel="noopener"><span data-t="allReviews">Tüm yorumları okuyun</span><svg class="ic"><use href="#i-out"/></svg></a>
+        <a class="link" href="https://www.dentvibe.com/video-gallery" data-href="videos" target="_blank" rel="noopener"><span data-t="videoReviews">Video yorumları izleyin</span><svg class="ic"><use href="#i-out"/></svg></a>
+      </div>
+      <p class="footnote muted" style="margin-top:8px" data-t="revNote">Yorumlar hastaların yazdığı haliyle gösterilir.</p>
+    </div>
+  </section>
+
+  <!-- ======================= 5 · INCLUDED + STEPS ======================= -->
+  <section class="tile surface" id="included" aria-labelledby="incl-title">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow" data-t="inEyebrow">Her şey planlı</p>
+        <h2 id="incl-title" data-t="inTitle">Siz gelin, gerisini biz düşünelim.</h2>
+      </div>
+      <div class="stats" id="stats"></div>
+      <div class="incl-wrap">
+        <ul class="incl" id="incl"></ul>
+        <div data-reveal>
+          <h3 class="steps-title" data-t="howTitle">Nasıl işler?</h3>
+          <ol class="steps" id="steps"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 6 · CLINIC ======================= -->
+  <section class="tile mist" id="clinic" aria-labelledby="clinic-title">
+    <div class="shell">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow" data-t="clEyebrow">Klinik</p>
+        <h2 id="clinic-title" data-t="clTitle">Dentvibe’ı yakından tanıyın.</h2>
+        <p class="sub">Fikirtepe, Hızırbey Cd. 25CJ, 34720 Kadıköy / İstanbul</p>
+        <div class="links-row"><a class="link" href="https://maps.app.goo.gl/Rwm2aTUgNevUKxyv9" target="_blank" rel="noopener"><span data-t="directions">Yol tarifi alın</span><svg class="ic"><use href="#i-out"/></svg></a></div>
+      </div>
+      <div class="rail-wrap">
+        <div class="rail-nav"><button type="button" data-rail-prev aria-label="Önceki" data-t-aria="prevGen"><svg class="ic"><use href="#i-l"/></svg></button><button type="button" data-rail-next aria-label="Sonraki" data-t-aria="nextGen"><svg class="ic"><use href="#i-r"/></svg></button></div>
+        <div class="photos" data-rail tabindex="0" role="region" aria-label="Klinik fotoğrafları" data-t-aria="clPhotos">
+          <figure><img src="assets/clinic/clinic-1.webp" alt="Avluya bakan geniş pencereli bekleme salonu" data-t-alt="cl1" width="1200" height="800" loading="lazy" decoding="async"></figure>
+          <figure class="tall"><img src="assets/clinic/founder-patient.webp" alt="Dr. Çağatay Kavaz klinik salonunda bir misafirle" data-t-alt="cl2" width="900" height="959" loading="lazy" decoding="async"></figure>
+          <figure><img src="assets/clinic/clinic-3.webp" alt="Kliniğin koridoru ve tedavi odaları" data-t-alt="cl3" width="1200" height="800" loading="lazy" decoding="async"></figure>
+          <figure><img src="assets/clinic/clinic-2.webp" alt="Resepsiyon ve bekleme alanı" data-t-alt="cl4" width="1200" height="800" loading="lazy" decoding="async"></figure>
+          <figure><img src="assets/clinic/clinic-5.webp" alt="Kadıköy’deki binanın avlusu" data-t-alt="cl5" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 7 · CONTACT + USEFUL LINKS ======================= -->
+  <section class="tile ink contact" id="contact" aria-labelledby="contact-title">
+    <div class="shell contact-grid">
+      <div data-reveal>
+        <h2 id="contact-title" data-t="ctTitle">Her şey tek bir mesajla başlar.</h2>
+        <p class="lead" style="display:block" data-t="ctSub">İhtiyacınızı WhatsApp’tan yazın; kişisel koordinatörünüz seçeneklerinizi ve fiyat bilgisini iletsin.</p>
+        <div class="contact-cta">
+          <a class="btn btn-primary" data-wa="contact" href="https://wa.me/905449547728"><svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg><span data-t="ctBtn">WhatsApp’tan yazın</span></a>
+          <a class="btn btn-bordered" href="tel:+905449547728"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span data-t="call">Ara</span></a>
+        </div>
+        <p class="note footnote" data-t="note">Ücretsiz ve bağlayıcı değil. WhatsApp mesajınız hazır açılır; siz göndermeden hiçbir şey gönderilmez.</p>
+        <ul class="group">
+          <li><a class="row" data-wa="contact-row" href="https://wa.me/905449547728"><svg class="ic ic-f row-lead" aria-hidden="true"><use href="#i-wa"/></svg><span class="row-text"><span class="row-title">WhatsApp</span><span class="row-sub" data-t="coord">7/24 kişisel koordinatör</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+          <li><a class="row" href="tel:+905449547728"><svg class="ic row-lead" aria-hidden="true"><use href="#i-phone"/></svg><span class="row-text"><span class="row-title" data-t="phone">Telefon</span><span class="row-sub num">+90 544 954 77 28</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+          <li><a class="row" href="https://maps.app.goo.gl/Rwm2aTUgNevUKxyv9" target="_blank" rel="noopener"><svg class="ic row-lead" aria-hidden="true"><use href="#i-pin"/></svg><span class="row-text"><span class="row-title" data-t="directionsShort">Yol tarifi</span><span class="row-sub">Fikirtepe, Hızırbey Cd. 25CJ, Kadıköy</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+          <li><div class="row"><svg class="ic row-lead" aria-hidden="true"><use href="#i-clock"/></svg><span class="row-text"><span class="row-title" data-t="hours">Çalışma saatleri</span><span class="row-sub num" data-t="hoursVal">Pzt–Cum 11:00–19:30 · Cmt 11:00–17:00</span></span><span class="state" id="openState" hidden><i aria-hidden="true"></i><span></span></span></div></li>
+          <li><a class="row" href="mailto:info@dentvibe.com"><svg class="ic row-lead" aria-hidden="true"><use href="#i-mail"/></svg><span class="row-text"><span class="row-title" data-t="email">E-posta</span><span class="row-sub">info@dentvibe.com</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="linkcols" aria-label="Faydalı bağlantılar" data-t-aria="useful" data-reveal style="--i:1">
+        <div>
+          <h3 data-t="treatments">Tedaviler</h3>
+          <div id="treatLinks"></div>
+        </div>
+        <div>
+          <h3 data-t="knowUs">Bizi tanıyın</h3>
+          <a href="https://www.dentvibe.com/smile-gallery" data-href="gallery" target="_blank" rel="noopener" data-t="lGallery">Gülüş galerisi</a>
+          <a href="https://www.dentvibe.com/video-gallery" data-href="videos" target="_blank" rel="noopener" data-t="lVideos">Video galeri</a>
+          <a href="https://www.dentvibe.com/team" data-href="team" target="_blank" rel="noopener" data-t="lDoctors">Doktorlarımız</a>
+          <a href="https://www.dentvibe.com/testimonials" data-href="reviews" target="_blank" rel="noopener" data-t="lReviews">Hasta yorumları</a>
+          <a href="https://www.dentvibe.com/about-us" data-href="about" target="_blank" rel="noopener" data-t="lAbout">Hakkımızda</a>
+          <a href="https://www.dentvibe.com/blog" data-href="blog" target="_blank" rel="noopener">Blog</a>
+          <a href="https://www.dentvibe.com/free-consultation" data-href="consult" target="_blank" rel="noopener" data-t="lConsult">Ücretsiz randevu</a>
+        </div>
+        <div>
+          <h3 data-t="follow">Takip edin</h3>
+          <div class="social">
+            <a href="https://www.instagram.com/dentvibe.international/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+            <a href="https://www.youtube.com/@dentvibe.international" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
+            <a href="https://www.tiktok.com/@dentvibe" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic"><use href="#i-tt"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61550856635648" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+          </div>
+          <img class="slogan" src="assets/brand/logo-light.png" alt="" width="280" height="82" loading="lazy">
+        </div>
+      </nav>
+    </div>
+    <div class="shell">
+      <div class="legal footnote">
+        <span>© 2026 Dentvibe Dental Clinic, İstanbul · <a href="https://www.dentvibe.com/privacy" data-href="privacy" target="_blank" rel="noopener" data-t="privacy">Gizlilik politikası</a></span>
+        <span data-t="legal">Fotoğraflar © Dentvibe. Tedavi sonuçları kişiden kişiye değişir.</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- the single primary action -->
+<div class="dock" id="dock">
+  <a class="btn btn-primary dock-wa" id="dockWa" data-wa="dock" href="https://wa.me/905449547728">
+    <svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg>
+    <span class="dock-text"><span class="dock-l1" data-t="dockL1">Ücretsiz planımı al</span><span class="dock-l2" id="dockL2"></span></span>
+    <span class="count num" id="count" hidden></span>
+  </a>
+  <a class="btn btn-icon" href="tel:+905449547728" aria-label="Kliniği arayın" data-t-aria="callClinic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></a>
+</div>
+
+<!-- doctor sheet -->
+<dialog class="sheet" id="sheet" aria-labelledby="sheetName">
+  <div class="sheet-panel" id="sheetPanel">
+    <span class="grab" id="grab" aria-hidden="true"></span>
+    <button class="sheet-close" type="button" id="sheetClose" aria-label="Kapat" data-t-aria="close"><svg class="ic"><use href="#i-x"/></svg></button>
+    <div class="sheet-top" id="sheetTop">
+      <img id="sheetImg" alt="" width="84" height="104">
+      <div><h3 id="sheetName"></h3><p id="sheetRole"></p></div>
+    </div>
+    <ul class="creds" id="sheetCreds"></ul>
+    <p class="sheet-bio" id="sheetBio"></p>
+    <div class="sheet-actions">
+      <a class="btn btn-primary" id="sheetWa" data-wa="doctor" href="https://wa.me/905449547728"><svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg><span id="sheetWaText"></span></a>
+      <a class="link" id="sheetMore" href="https://www.dentvibe.com/team" target="_blank" rel="noopener"><span data-t="fullProfile">Tüm profil</span><svg class="ic"><use href="#i-out"/></svg></a>
+    </div>
+  </div>
+</dialog>
+
+<noscript><style>.deck-ui,.hint,.dock-l2{display:none}</style></noscript>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* ============================== CONFIG ============================== */
+const CONFIG = {
+  phone: '905449547728',   // WhatsApp number, digits only
+  refPrefix: 'LP',         // lead-source tag at the end of every message (set addRef:false to drop it)
+  addRef: true
+};
+const EN_SITE = 'https://www.dentvibe.com/';
+const TR_SITE = 'https://www.dentvibe.com.tr/';
+
+/* ============================== DATA (published by the clinic) ============================== */
+const SERVICES = [
+  { id:'implants', img:'implants', badge:'real', caseId:'fatima', url:{en:'dental-implants-turkey', tr:TR_SITE+'dis-implantlari'},
+    kicker:{en:'Dental surgery', tr:'Cerrahi'}, title:{en:'Dental Implants', tr:'Diş İmplantı'},
+    line:{en:'3D-guided surgery with the world’s most reliable implant brands.', tr:'Dünyanın en güvenilir implant markalarıyla 3D rehberli cerrahi.'},
+    facts:[['clock',{en:'5 days in Istanbul', tr:'İstanbul’da 5 gün'}],['shield',{en:'10-year warranty', tr:'10 yıl garanti'}]],
+    msg:{en:'Dental implants', tr:'Diş implantı'} },
+  { id:'digifix', img:'digifix', badge:'bridge', caseId:'fatna', url:{en:'digifix-direct', tr:'digifix-direct'},
+    kicker:{en:'Same-day teeth', tr:'Aynı gün diş'}, title:{en:'DigiFix Direct™', tr:'DigiFix Direct™'},
+    line:{en:'Fixed teeth on the same day your implants are placed.', tr:'İmplantlarınızın yapıldığı gün sabit dişler.'},
+    facts:[['bolt',{en:'Same day', tr:'Aynı gün'}],['shield',{en:'Fixed, not removable', tr:'Sabit, hareketli değil'}]],
+    msg:{en:'DigiFix Direct™ same-day teeth', tr:'DigiFix Direct™ aynı gün sabit diş'} },
+  { id:'veneers', img:'veneers', badge:'real', caseId:'angela', url:{en:'dental-veneers-turkey', tr:TR_SITE+'lamina-porselen'},
+    kicker:{en:'Ultra-aesthetic', tr:'Ultra estetik'}, title:{en:'E.max Veneers', tr:'E.max Lamine'},
+    line:{en:'Ivoclar E.max Ceram veneers with the translucency of natural teeth.', tr:'Doğal dişin geçirgenliğinde Ivoclar E.max Ceram lamineler.'},
+    facts:[['clock',{en:'Ready in 3 days', tr:'3 günde hazır'}],['shield',{en:'5-year warranty', tr:'5 yıl garanti'}]],
+    msg:{en:'E.max veneers', tr:'E.max lamine'} },
+  { id:'aurathin', img:'aurathin', badge:'real', caseId:'elif', url:{en:'aurathin', tr:'aurathin'},
+    kicker:{en:'Non-prep veneers', tr:'Kesimsiz lamine'}, title:{en:'AuraThin™', tr:'AuraThin™'},
+    line:{en:'Ultra-thin E.max veneers, with no shaving of your own teeth.', tr:'Kendi dişleriniz kesilmeden, ultra ince E.max lamineler.'},
+    facts:[['feather',{en:'No tooth shaving', tr:'Diş kesimi yok'}],['shield',{en:'5-year warranty', tr:'5 yıl garanti'}]],
+    msg:{en:'AuraThin™ non-prep veneers', tr:'AuraThin™ kesimsiz lamine'} },
+  { id:'crowns', img:'crowns', badge:'real', caseId:'nikolai', url:{en:'dental-crowns-turkey', tr:TR_SITE+'zirkonyum-dis'},
+    kicker:{en:'ZirCad Prime™', tr:'ZirCad Prime™'}, title:{en:'Zirconia Crowns', tr:'Zirkonyum Kaplama'},
+    line:{en:'Precision-crafted in our own digital lab for strength and a natural look.', tr:'Kendi dijital laboratuvarımızda, dayanıklı ve doğal görünümlü üretilir.'},
+    facts:[['clock',{en:'4–5 days', tr:'4–5 gün'}],['flask',{en:'In-house lab', tr:'Kendi laboratuvarımız'}]],
+    msg:{en:'Zirconia crowns', tr:'Zirkonyum kaplama'} },
+  { id:'bonding', img:'bonding', badge:'real', caseId:'ben', url:{en:'composite-bonding-turkey', tr:'composite-bonding-turkey'},
+    kicker:{en:'Same-day smile', tr:'Aynı gün gülüş'}, title:{en:'Composite Bonding', tr:'Kompozit Bonding'},
+    line:{en:'Chips, gaps and stains corrected in a single session.', tr:'Kırık, aralık ve lekeler tek seansta düzeltilir.'},
+    facts:[['bolt',{en:'One session', tr:'Tek seans'}],['gem',{en:'High-density materials', tr:'Yüksek yoğunluklu materyal'}]],
+    msg:{en:'Composite bonding', tr:'Kompozit bonding'} },
+  { id:'makeover', img:'makeover', badge:'real', caseId:'melissa', url:{en:'hollywood-smile-makeover-turkey', tr:TR_SITE+'gulus-tasarimi'},
+    kicker:{en:'Veneers or crowns', tr:'Lamine veya zirkonyum'}, title:{en:'Hollywood Smile', tr:'Gülüş Tasarımı'},
+    line:{en:'A bright, even, confident smile, planned around your face.', tr:'Yüzünüze göre planlanan parlak, düzgün ve özgüvenli bir gülüş.'},
+    facts:[['clock',{en:'5 days', tr:'5 gün'}],['shield',{en:'5-year warranty', tr:'5 yıl garanti'}]],
+    msg:{en:'A Hollywood smile makeover', tr:'Gülüş tasarımı'} }
+];
+
+const CASES = [
+  { id:'fatima',   cat:'implants', name:'Fatima',   w:630, label:{en:'Implants with zirconia', tr:'İmplant ve zirkonyum'} },
+  { id:'fatna',    cat:'implants', name:'Fatna',    w:630, label:{en:'All-on-6 with zirconia', tr:'Zirkonyum ile All-on-6'} },
+  { id:'nina',     cat:'implants', name:'Nina',     w:420, label:{en:'All-on-6 with zirconium', tr:'Zirkonyum ile All-on-6'} },
+  { id:'kayley',   cat:'implants', name:'Kayley',   w:420, label:{en:'Full-mouth implants, hybrid prosthesis', tr:'Tam ağız implant, hibrit protez'} },
+  { id:'angela',   cat:'veneers',  name:'Angela',   w:420, label:{en:'E.max veneers', tr:'E.max lamine'} },
+  { id:'khalida',  cat:'veneers',  name:'Khalida',  w:420, label:{en:'E.max veneers', tr:'E.max lamine'} },
+  { id:'elif',     cat:'aurathin', name:'Elif',     w:630, label:{en:'Non-prep E.max veneers', tr:'Kesimsiz E.max lamine'} },
+  { id:'duygu',    cat:'aurathin', name:'Duygu',    w:420, label:{en:'Non-prep E.max veneers', tr:'Kesimsiz E.max lamine'} },
+  { id:'nikolai',  cat:'crowns',   name:'Nikolai',  w:630, label:{en:'Multilayer monolithic zirconia', tr:'Multilayer monolitik zirkonyum'} },
+  { id:'sergey',   cat:'crowns',   name:'Sergey',   w:630, label:{en:'Multilayer monolithic zirconia', tr:'Multilayer monolitik zirkonyum'} },
+  { id:'palwasha', cat:'crowns',   name:'Palwasha', w:420, label:{en:'Zirconium crowns', tr:'Zirkonyum kaplama'} },
+  { id:'ben',      cat:'bonding',  name:'Ben',      w:420, label:{en:'Whitening and composite bonding', tr:'Beyazlatma ve kompozit bonding'} },
+  { id:'melissa',  cat:'makeover', name:'Melissa',  w:630, label:{en:'Zirconia smile makeover', tr:'Zirkonyum gülüş tasarımı'} }
+];
+
+const DOCTORS = [
+  { id:'kavaz', img:'cagatay-kavaz', name:'Dr. Çağatay Kavaz', founder:true, url:'team/dr-kavaz',
+    role:{en:'Founder & Clinical Director', tr:'Kurucu ve Başhekim'},
+    creds:{en:['Istanbul University, 2012','Implantology since 2014','ITI · OSSEDER member'], tr:['İstanbul Üniversitesi, 2012','2014’ten beri implantoloji','ITI · OSSEDER üyesi']},
+    bio:{en:'Focused on advanced dental surgery and implantology since 2014. He personally oversees the diagnostic planning of every patient who comes to the clinic.',
+         tr:'2014’ten beri ileri diş cerrahisi ve implantoloji alanında çalışıyor. Kliniğe gelen her hastanın tanı ve tedavi planlamasını bizzat denetliyor.'} },
+  { id:'buber', img:'gokhan-buber', name:'Dr. Gökhan Buber', url:'team/dr-buber',
+    role:{en:'Non-prep veneers · Smile design', tr:'Kesimsiz lamine · Gülüş tasarımı'},
+    creds:{en:['Marmara University, 2018','AuraThin™ protocol'], tr:['Marmara Üniversitesi, 2018','AuraThin™ protokolü']},
+    bio:{en:'Lead dentist at Dentvibe since 2024. Laminate and non-prep veneers, smile design and zirconia, with minimally invasive planning that keeps as much natural tooth as possible.',
+         tr:'2024’ten beri Dentvibe’da sorumlu diş hekimi. Lamine ve kesimsiz lamine, gülüş tasarımı ve zirkonyum; doğal dişi en çok koruyan minimal invaziv planlama.'} },
+  { id:'agrali', img:'omer-birkan-agrali', name:'Dr. Ömer Birkan Ağralı', url:'team/dr-agrali',
+    role:{en:'Periodontist (gum specialist)', tr:'Periodontist (diş eti uzmanı)'},
+    creds:{en:['PhD, Periodontology','Assoc. Prof., Marmara University'], tr:['Periodontoloji doktorası','Doç., Marmara Üniversitesi']},
+    bio:{en:'Gum treatments, soft-tissue surgery and pink aesthetics, as well as implant placement and bone grafting when bone volume is insufficient.',
+         tr:'Diş eti tedavileri, yumuşak doku cerrahisi ve pembe estetik; ayrıca implant uygulamaları ve yetersiz kemikte kemik grefti.'} },
+  { id:'badur', img:'busra-badur', name:'Dr. Büşra Badur', url:'team/dr-badur',
+    role:{en:'Restorative · Pediatric dentist', tr:'Restoratif · Çocuk diş hekimi'},
+    creds:{en:['Marmara University, 2020','Pediatric dentistry, PhD studies'], tr:['Marmara Üniversitesi, 2020','Pedodonti doktora çalışmaları']},
+    bio:{en:'Aesthetic and functional restorations for patients of all ages, and a calm, fear-free approach for children.',
+         tr:'Her yaştan hasta için estetik ve işlevsel restorasyonlar; çocuklar için sakin, korkusuz bir yaklaşım.'} },
+  { id:'arican', img:'esra-gokkaya-arican', name:'Dr. Esra Gökkaya Arıcan', url:'team/dr-arican',
+    role:{en:'Orthodontist · Invisalign', tr:'Ortodontist · Invisalign'},
+    creds:{en:['PhD, Orthodontics','Invisalign Platinum Provider'], tr:['Ortodonti doktorası','Invisalign Platinum Provider']},
+    bio:{en:'Clear aligner treatment for children, teens and adults, fixed and removable appliances, and orthodontics combined with jaw surgery.',
+         tr:'Çocuk, genç ve yetişkinlerde şeffaf plak tedavisi, sabit ve hareketli apareyler, çene cerrahisi destekli ortodonti.'} },
+  { id:'turkyilmaz', img:'ege-turkyilmaz', name:'Dr. Ege Türkyılmaz', url:'team/dr-turkyilmaz',
+    role:{en:'Endodontist (root canal specialist)', tr:'Endodontist (kanal tedavisi uzmanı)'},
+    creds:{en:['PhD, Endodontics, 2018','Microscope-assisted endodontics'], tr:['Endodonti doktorası, 2018','Mikroskop destekli endodonti']},
+    bio:{en:'Root canal treatment, retreatment and complex anatomies under the microscope, alongside implant and prosthetic work.',
+         tr:'Mikroskop altında kanal tedavisi, yeniden tedavi ve zor anatomiler; implant ve protez uygulamaları da yapıyor.'} },
+  { id:'celik', img:'ilayda-celik', name:'Dr. İlayda Çelik', url:'team/dr-celik',
+    role:{en:'General dentistry', tr:'Genel diş hekimi'},
+    creds:{en:['Istanbul Medipol University, 2025'], tr:['İstanbul Medipol Üniversitesi, 2025']},
+    bio:{en:'Preventive and restorative care, root canal and gum treatments, with a special interest in children’s dentistry.',
+         tr:'Koruyucu ve restoratif tedaviler, kanal ve diş eti tedavileri; çocuk diş hekimliğine özel ilgi.'} }
+];
+
+const REVIEWS = [
+  { img:'angela-d', name:'Angela D.', from:{en:'Switzerland', tr:'İsviçre'}, q:'We booked the treatment with our wonderful patient coordinator. She gave us all information firstly through Instagram and afterwards we kept in touch through WhatsApp.' },
+  { img:'gary-a', name:'Gary A.', q:'The compliments I have had about my new teeth have been amazing! Dr. Kavaz is very professional, and did a quality job at a great price.' },
+  { img:'mark-l', name:'Mark L.', from:{en:'United Kingdom', tr:'Birleşik Krallık'}, q:'The clinic was absolutely spotlessly clean and the equipment was state of the art and most importantly as a patient, I felt so comfortable and confident in the care they provided.' },
+  { img:'maria-v', name:'Maria V.', from:{en:'Spain', tr:'İspanya'}, q:'This clinic is really great. It was enough for me to stay here for only 5-6 days for my treatment! The doctor team is very professional.' },
+  { img:'magdalena-j', name:'Magdalena J.', from:{en:'United Kingdom', tr:'Birleşik Krallık'}, q:'I am always very anxious at the dentist and they did a great job in making me feel comfortable and anxiety free!' },
+  { img:'runa-s', name:'Runa S.', from:{en:'United Kingdom', tr:'Birleşik Krallık'}, q:'They really make sure your dental health and satisfaction is top notch, and they are very honest with you which is wonderful when going for a treatment abroad.' },
+  { img:'malika-p', name:'Malika P.', from:{en:'France', tr:'Fransa'}, q:'Friendly and efficient team, every step was a real pleasure! They have a family spirit.' },
+  { img:'ruzzana-i', name:'Ruzzana I.', from:{en:'Singapore', tr:'Singapur'}, q:'I came back after 6 months for my implant Crowns and the experience was great like before! Thanks to all the team!' },
+  { img:'kay-l', name:'Kay L.', q:'I must say that the clinic has state of the art facilities and the dentist who attended to me is very professional and made me feel comfortable.' }
+];
+
+/* section 5 differs by audience: travel package (en) vs. local clinic promise (tr), each as published */
+const INCLUDED = {
+  en:[['bed','Hotel accommodation'],['plane','Airport transfers'],['scan','Free X-rays and 3D scans'],['grad','PhD expert consultations'],['pill','Pre- and post-treatment medication'],['headset','Personal coordinator, 24/7']],
+  tr:[['scan','Bütün röntgenler'],['headset','7/24 kişisel hasta koordinatörü'],['flask','Kendi laboratuvarımızda en hızlı servis'],['users','Uzman ve tecrübeli doktorlar'],['gem','A+ materyal kalitesi'],['shield','Sınırlı hasta kabulü, butik hizmet']]
+};
+const STEPS = {
+  en:[['Message us','WhatsApp, Instagram, email or a phone call, whatever you prefer.'],['Meet your coordinator','Your personal patient coordinator guides you from the first message.'],['Get your options','Learn your treatment options and a cost estimate.'],['Fly to Istanbul','We set up your airport transfers and hotel.'],['Fly home smiling','That’s it. Time to show off your new smile.']],
+  tr:[['Bize yazın','WhatsApp, Instagram, e-posta veya telefon; hangisi size uygunsa.'],['Koordinatörünüzle tanışın','Kişisel hasta koordinatörünüz ilk mesajdan itibaren yanınızda.'],['Seçeneklerinizi öğrenin','Tedavi seçeneklerinizi ve fiyat bilgisini alın.'],['Tedavinizi olun','Planınıza göre, uzman doktorlarımızla.'],['Yeni gülüşünüzle çıkın','Hepsi bu. Artık gülüşünüzü gösterme zamanı.']]
+};
+const STATS = {
+  en:[['10','-year','warranty on A+ dental implants, from our surgeons.'],['5','-year','warranty on cosmetic treatments from our in-house lab.'],['10','+ years','serving international patients.']],
+  tr:[['10',' yıl','A+ implantlarımıza cerrahlarımızdan garanti.'],['5',' yıl','kendi laboratuvarımızda yapılan kozmetik işlemlere garanti.'],['10',' yılı aşkın','uluslararası ve yerel hastalara hizmet deneyimi.']]
+};
+
+/* ============================== STRINGS ============================== */
+const T = {
+  en:{
+    skip:'Skip to treatments', lang:'Language', onGoogle:'on Google', excellent:'Excellent', onTrustpilot:'on Trustpilot',
+    h1a:'Pick your', h1b:'new smile.', lead:'Swipe the treatments, tap + on yours, and get a free plan on WhatsApp.',
+    deck:'Treatments', prev:'Previous treatment', next:'Next treatment', prevGen:'Previous', nextGen:'Next',
+    hint:'Tap + to add more than one treatment.', add:'Add', added:'Added', details:'Details',
+    addAria:t=>`Add ${t} to my plan`, slide:(i,n)=>`${i} of ${n}`, goTo:t=>`Show ${t}`,
+    badgeReal:'Real patient', badgeBridge:'Hybrid bridge',
+    dockL1:'Get my free plan', dockMany:n=>`${n} treatments selected`, callClinic:'Call the clinic',
+    resEyebrow:'Real results', resTitle:'Before and after, from our own patients.', resSub:'Drag the line to compare. Every result is different, and your plan is made for your teeth.',
+    resGallery:'See the full smile gallery', before:'Before', after:'After', cmpRange:'Before and after comparison', cases:'Patient cases',
+    docEyebrow:'Your doctors', docTitle:'Specialists, each in their own field.', docSub:'Every treatment plan is overseen by our founder, Dr. Çağatay Kavaz. Tap a doctor to read more or ask for a free consultation.',
+    founder:'Founder', about:'About', teamCap:'The Dentvibe team, Kadıköy, Istanbul.', teamAlt:'The Dentvibe doctors standing together at the clinic', allDoctors:'All doctors',
+    consultWith:n=>`Free consultation with ${n}`, fullProfile:'Full profile', close:'Close',
+    revEyebrow:'Patient reviews', revTitle:'Patients leave smiling.', googleReviews:'Google reviews', allReviews:'Read all reviews', videoReviews:'Watch video reviews', revNote:'Reviews are shown as patients wrote them.',
+    inEyebrow:'All arranged', inTitle:'You fly in. We arrange the rest.', howTitle:'How it works',
+    clEyebrow:'The clinic', clTitle:'Step inside Dentvibe.', directions:'Get directions', clPhotos:'Clinic photos',
+    cl1:'Waiting lounge with a large window over the courtyard', cl2:'Dr. Çağatay Kavaz with a visitor in the clinic lounge', cl3:'The clinic’s corridor and treatment rooms', cl4:'Reception and lounge', cl5:'The building’s courtyard in Kadıköy',
+    ctTitle:'Start with one message.', ctSub:'Tell us what you need on WhatsApp. Your personal coordinator replies with your options and a cost estimate.',
+    ctBtn:'Chat on WhatsApp', call:'Call', note:'Free and without obligation. WhatsApp opens with your message ready; nothing is sent until you send it.',
+    coord:'Personal coordinator, 24/7', phone:'Phone', directionsShort:'Directions', hours:'Opening hours', hoursVal:'Mon–Fri 11:00–19:30 · Sat 11:00–17:00', email:'Email',
+    open:'Open now', closed:'Closed now',
+    useful:'Useful links', treatments:'Treatments', knowUs:'Get to know us', follow:'Follow us',
+    lGallery:'Smile gallery', lVideos:'Video reviews', lDoctors:'Our doctors', lReviews:'Patient reviews', lAbout:'About us', lConsult:'Free consultation',
+    privacy:'Privacy policy', legal:'Photos © Dentvibe. Treatment results vary from patient to patient.',
+    /* WhatsApp messages */
+    waHi:'Hi Dentvibe!', waPlan:'I’d like a free treatment plan for:', waGeneral:'I’d like a free treatment plan and a cost estimate.',
+    waDoctor:n=>`I’d like a free consultation with ${n}.`
+  },
+  tr:{
+    skip:'Tedavilere geç', lang:'Dil', onGoogle:'Google’da', excellent:'Mükemmel', onTrustpilot:'Trustpilot’ta',
+    h1a:'Yeni gülüşünüzü', h1b:'seçin.', lead:'Tedavilere göz atın, + ile seçin, ücretsiz planınızı WhatsApp’tan alın.',
+    deck:'Tedaviler', prev:'Önceki tedavi', next:'Sonraki tedavi', prevGen:'Önceki', nextGen:'Sonraki',
+    hint:'Birden fazla tedavi eklemek için + simgesine dokunun.', add:'Ekle', added:'Eklendi', details:'Detaylar',
+    addAria:t=>`${t} planıma ekle`, slide:(i,n)=>`${i} / ${n}`, goTo:t=>`${t} göster`,
+    badgeReal:'Gerçek hasta', badgeBridge:'Hibrit köprü',
+    dockL1:'Ücretsiz planımı al', dockMany:n=>`${n} tedavi seçildi`, callClinic:'Kliniği arayın',
+    resEyebrow:'Gerçek sonuçlar', resTitle:'Kendi hastalarımızdan öncesi ve sonrası.', resSub:'Karşılaştırmak için çizgiyi kaydırın. Her sonuç farklıdır; planınız dişlerinize göre hazırlanır.',
+    resGallery:'Tüm gülüş galerisini görün', before:'Öncesi', after:'Sonrası', cmpRange:'Öncesi ve sonrası karşılaştırması', cases:'Hasta vakaları',
+    docEyebrow:'Doktorlarınız', docTitle:'Her biri kendi alanında uzman.', docSub:'Her tedavi planı kurucumuz Dr. Çağatay Kavaz’ın gözetimindedir. Daha fazlası veya ücretsiz görüşme için bir doktora dokunun.',
+    founder:'Kurucu', about:'Hakkında', teamCap:'Dentvibe ekibi, Kadıköy, İstanbul.', teamAlt:'Dentvibe doktorları klinikte bir arada', allDoctors:'Tüm doktorlar',
+    consultWith:n=>`${n} ile ücretsiz görüşme`, fullProfile:'Tüm profil', close:'Kapat',
+    revEyebrow:'Hasta yorumları', revTitle:'Hastalarımız gülümseyerek ayrılıyor.', googleReviews:'Google yorumları', allReviews:'Tüm yorumları okuyun', videoReviews:'Video yorumları izleyin', revNote:'Yorumlar hastaların yazdığı haliyle gösterilir.',
+    inEyebrow:'Her şey planlı', inTitle:'Siz gelin, gerisini biz düşünelim.', howTitle:'Nasıl işler?',
+    clEyebrow:'Klinik', clTitle:'Dentvibe’ı yakından tanıyın.', directions:'Yol tarifi alın', clPhotos:'Klinik fotoğrafları',
+    cl1:'Avluya bakan geniş pencereli bekleme salonu', cl2:'Dr. Çağatay Kavaz klinik salonunda bir misafirle', cl3:'Kliniğin koridoru ve tedavi odaları', cl4:'Resepsiyon ve bekleme alanı', cl5:'Kadıköy’deki binanın avlusu',
+    ctTitle:'Her şey tek bir mesajla başlar.', ctSub:'İhtiyacınızı WhatsApp’tan yazın; kişisel koordinatörünüz seçeneklerinizi ve fiyat bilgisini iletsin.',
+    ctBtn:'WhatsApp’tan yazın', call:'Ara', note:'Ücretsiz ve bağlayıcı değil. WhatsApp mesajınız hazır açılır; siz göndermeden hiçbir şey gönderilmez.',
+    coord:'7/24 kişisel koordinatör', phone:'Telefon', directionsShort:'Yol tarifi', hours:'Çalışma saatleri', hoursVal:'Pzt–Cum 11:00–19:30 · Cmt 11:00–17:00', email:'E-posta',
+    open:'Şu an açık', closed:'Şu an kapalı',
+    useful:'Faydalı bağlantılar', treatments:'Tedaviler', knowUs:'Bizi tanıyın', follow:'Takip edin',
+    lGallery:'Gülüş galerisi', lVideos:'Video galeri', lDoctors:'Doktorlarımız', lReviews:'Hasta yorumları', lAbout:'Hakkımızda', lConsult:'Ücretsiz randevu',
+    privacy:'Gizlilik politikası', legal:'Fotoğraflar © Dentvibe. Tedavi sonuçları kişiden kişiye değişir.',
+    waHi:'Merhaba Dentvibe!', waPlan:'Şu tedaviler için ücretsiz tedavi planı almak istiyorum:', waGeneral:'Ücretsiz tedavi planı ve fiyat bilgisi almak istiyorum.',
+    waDoctor:n=>`${n} ile ücretsiz bir görüşme yapmak istiyorum.`
+  }
+};
+/* site links per language: TR pages where the Turkish site has one, otherwise the English page */
+const HREF = {
+  site:{en:EN_SITE, tr:TR_SITE}, gallery:{en:EN_SITE+'smile-gallery', tr:TR_SITE+'gulus-galerisi'},
+  videos:{en:EN_SITE+'video-gallery', tr:TR_SITE+'video-galeri'}, team:{en:EN_SITE+'team', tr:TR_SITE+'doktorlarimiz'},
+  reviews:{en:EN_SITE+'testimonials', tr:TR_SITE+'hasta-yorumlari'}, about:{en:EN_SITE+'about-us', tr:TR_SITE+'hakkimizda'},
+  blog:{en:EN_SITE+'blog', tr:TR_SITE+'blog'}, consult:{en:EN_SITE+'free-consultation', tr:TR_SITE+'iletisim'},
+  privacy:{en:EN_SITE+'privacy', tr:TR_SITE+'gizlilik-politikasi'}
+};
+
+/* ============================== helpers ============================== */
+let LANG = 'tr';
+const isLang = l => typeof l === 'string' && Object.prototype.hasOwnProperty.call(T, l);
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const S = () => T[LANG];
+const loc = v => (v && typeof v === 'object' && 'en' in v) ? (v[LANG] ?? v.en) : v;
+const svcUrl = s => { const u = loc(s.url); return /^https?:/.test(u) ? u : EN_SITE + u; };
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+/* spring easing for script-driven animations, with a fallback where linear() is unsupported */
+const EASE_OK = window.CSS && CSS.supports && CSS.supports('transition-timing-function', 'linear(0, 1)');
+const ease = name => EASE_OK ? getComputedStyle(document.documentElement).getPropertyValue(name).trim() : (name === '--spring-bounce' ? 'cubic-bezier(.34,1.3,.64,1)' : 'cubic-bezier(.2,.8,.2,1)');
+const icon = (id, filled) => `<svg class="ic${filled ? ' ic-f' : ''}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const params = new URLSearchParams(location.search);
+const campaign = (params.get('utm_campaign') || params.get('utm_source') || '').replace(/[^\w .-]/g, '').slice(0, 40);
+function track(event, data) { try { (window.dataLayer = window.dataLayer || []).push(Object.assign({ event, page_lang: LANG }, data)); } catch (e) {} }
+function buzz() { try { navigator.vibrate && navigator.vibrate(8); } catch (e) {} }
+
+/* bindings: elements whose text depends on the language */
+const binds = [];
+function bind(node, value, attr) { binds.push([node, value, attr]); setText(node, value, attr); return node; }
+function setText(node, value, attr) {
+  const v = typeof value === 'function' ? value() : loc(value);
+  if (attr) node.setAttribute(attr, v); else node.textContent = v;
+}
+
+/* ============================== WhatsApp ============================== */
+function waLink(lines, source) {
+  const ref = CONFIG.addRef ? `\n\nRef: ${CONFIG.refPrefix}-${source}${campaign ? ' · ' + campaign : ''}` : '';
+  return `https://wa.me/${CONFIG.phone}?text=${encodeURIComponent(lines.join('\n') + ref)}`;
+}
+function planMessage(ids) {
+  const list = ids.map(id => SERVICES.find(s => s.id === id)).filter(Boolean).map(s => '• ' + loc(s.msg));
+  return list.length ? [S().waHi, S().waPlan, ...list] : [S().waHi, S().waGeneral];
+}
+
+/* ============================== 1 · deck ============================== */
+const deck = $('#deck'), dotsBox = $('#dots'), hint = $('#hint');
+const selected = new Set();
+let active = 0, centers = [], stride = 1, anchor = 0, pending = null;
+
+SERVICES.forEach((s, i) => {
+  const card = el('article', 'svc');
+  card.dataset.id = s.id;
+  card.setAttribute('aria-roledescription', 'slide');
+  const media = el('div', 'svc-media');
+  const img = el('img');
+  img.src = `assets/cards/${s.img}.webp`; img.width = 630; img.height = 420; img.decoding = 'async';
+  img.loading = i < 2 ? 'eager' : 'lazy'; if (i === 0) img.fetchPriority = 'high';
+  bind(img, s.title, 'alt');
+  const badge = el('span', 'badge', '<i class="dot" aria-hidden="true"></i><span></span>');
+  bind(badge.lastChild, () => s.badge === 'bridge' ? S().badgeBridge : S().badgeReal);
+  const add = el('button', 'add', `<svg class="ic i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="ic i-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span></span>`);
+  add.type = 'button'; add.setAttribute('aria-pressed', 'false');
+  bind(add.lastChild, () => selected.has(s.id) ? S().added : S().add);
+  bind(add, () => S().addAria(loc(s.title)), 'aria-label');
+  add.addEventListener('click', e => { e.stopPropagation(); toggle(s.id); });
+  media.addEventListener('click', () => { if (i === active) toggle(s.id); else goTo(i); });
+  const facts = el('ul', 'facts');
+  s.facts.forEach(([ic, txt]) => { const li = el('li', '', icon(ic) + '<span></span>'); bind(li.lastChild, txt); facts.append(li); });
+  media.append(img, badge, add, facts);
+
+  const body = el('div', 'svc-body');
+  const kicker = bind(el('p', 'kicker'), s.kicker);
+  const titleRow = el('div', 'svc-title');
+  const h3 = bind(el('h3'), s.title);
+  const more = el('a', 'more', icon('out'));
+  more.target = '_blank'; more.rel = 'noopener';
+  bind(more, () => svcUrl(s), 'href');
+  bind(more, () => `${S().details}: ${loc(s.title)}`, 'aria-label');
+  titleRow.append(h3, more);
+  const line = bind(el('p', 'line'), s.line);
+  body.append(kicker, titleRow, line);
+  card.append(media, body);
+  bind(card, () => `${S().slide(i + 1, SERVICES.length)}: ${loc(s.title)}`, 'aria-label');
+  deck.append(card);
+
+  const dot = el('button');
+  dot.type = 'button';
+  bind(dot, () => S().goTo(loc(s.title)), 'aria-label');
+  dot.addEventListener('click', () => goTo(i));
+  dotsBox.append(dot);
+});
+const cards = $$('.svc', deck), dots = $$('button', dotsBox);
+
+function measure() {
+  const gap = parseFloat(getComputedStyle(deck).columnGap) || 12;
+  centers = cards.map(c => c.offsetLeft + c.offsetWidth / 2);
+  stride = (cards[0]?.offsetWidth || 300) + gap;
+  /* the snap anchor: the deck's centre on phones, the first card's slot when cards snap to the start */
+  const startAlign = /start/.test(getComputedStyle(cards[0]).scrollSnapAlign || '');
+  anchor = startAlign ? (parseFloat(getComputedStyle(deck).paddingLeft) || 0) + (cards[0]?.offsetWidth || 0) / 2 : deck.clientWidth / 2;
+  update();
+}
+function update() {
+  const mid = deck.scrollLeft + anchor;
+  let best = 0, bestD = Infinity;
+  centers.forEach((c, i) => {
+    const p = Math.max(-1.6, Math.min(1.6, (c - mid) / stride));
+    cards[i].style.setProperty('--p', p.toFixed(3));
+    cards[i].style.setProperty('--a', Math.min(1, Math.abs(p)).toFixed(3));
+    if (Math.abs(p) < bestD) { bestD = Math.abs(p); best = i; }
+  });
+  if (best !== active) setActive(best);
+  if (pending === best) pending = null;
+}
+let ticking = false;
+deck.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; update(); }); } }, { passive: true });
+addEventListener('resize', () => requestAnimationFrame(measure));
+
+function setActive(i) {
+  active = i;
+  cards.forEach((c, k) => c.classList.toggle('is-active', k === i));
+  dots.forEach((d, k) => { d.classList.toggle('on', k === i); if (k === i) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+  $('#prev').disabled = i === 0; $('#next').disabled = i === cards.length - 1;
+  renderDock(false);
+  results.follow(SERVICES[i].caseId);
+}
+function goTo(i) {
+  i = Math.max(0, Math.min(cards.length - 1, i));
+  pending = i === active ? null : i;
+  deck.scrollTo({ left: centers[i] - anchor, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+}
+$('#prev').addEventListener('click', () => goTo((pending ?? active) - 1));
+$('#next').addEventListener('click', () => goTo((pending ?? active) + 1));
+deck.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') { e.preventDefault(); goTo((pending ?? active) + 1); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); goTo((pending ?? active) - 1); }
+  else if ((e.key === 'Enter' || e.key === ' ') && e.target === deck) { e.preventDefault(); toggle(SERVICES[active].id); }
+});
+
+/* selection */
+function toggle(id) {
+  const on = !selected.has(id);
+  on ? selected.add(id) : selected.delete(id);
+  const i = SERVICES.findIndex(s => s.id === id);
+  cards[i].classList.toggle('is-selected', on);
+  dots[i].classList.toggle('picked', on);
+  const btn = $('.add', cards[i]);
+  btn.setAttribute('aria-pressed', String(on));
+  setText(btn.lastChild, () => on ? S().added : S().add);
+  hint.classList.add('gone');
+  buzz();
+  renderDock(true);
+  track('treatment_toggle', { treatment: id, selected: on, count: selected.size });
+}
+
+/* ============================== dock ============================== */
+const dockWa = $('#dockWa'), dockL2 = $('#dockL2'), count = $('#count');
+let lastL2 = '';
+function selectedIds() { return SERVICES.map(s => s.id).filter(id => selected.has(id)); }
+function renderDock(bump) {
+  const ids = selectedIds();
+  const target = ids.length ? ids : [SERVICES[active].id];
+  dockWa.href = waLink(planMessage(target), 'dock');
+  const l2 = ids.length > 1 ? S().dockMany(ids.length) : loc(SERVICES.find(s => s.id === target[0]).title);
+  if (l2 !== lastL2) {
+    dockL2.textContent = l2;
+    if (lastL2 && !reduceMotion.matches && dockL2.animate) dockL2.animate([{ transform: 'translateY(70%)', opacity: 0 }, { transform: 'none', opacity: .78 }], { duration: 480, easing: ease('--spring') });
+    lastL2 = l2;
+  }
+  count.hidden = ids.length === 0;
+  count.textContent = ids.length;
+  if (bump && ids.length) { count.classList.remove('bump'); void count.offsetWidth; count.classList.add('bump'); }
+}
+
+/* other WhatsApp links */
+function applyLinks() {
+  $$('[data-wa]').forEach(a => {
+    if (a === dockWa || a.id === 'sheetWa') return;
+    const ids = selectedIds();
+    a.href = waLink(planMessage(ids), a.dataset.wa);
+  });
+  $$('[data-wa], a[target="_blank"]').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-wa]');
+  if (!a) return;
+  if (a.dataset.wa !== 'dock' && a.id !== 'sheetWa') a.href = waLink(planMessage(selectedIds()), a.dataset.wa);
+  track('whatsapp_click', { wa_source: a.dataset.wa, treatments: selectedIds().join(',') });
+});
+
+/* ============================== 2 · results (before / after) ============================== */
+const results = (() => {
+  const fig = $('#cmp'), clip = $('.cmp-clip', fig), clipImg = $('img', clip), divider = $('.cmp-divider', fig);
+  const range = $('.cmp-range', fig), before = $('.cmp-before', fig), after = $('.cmp-after', fig), cap = $('#cmpCap'), box = $('#cases');
+  let current = CASES[0], pos = 50, drag = null, touched = false, inView = false, hinted = false;
+  function set(p) {
+    pos = Math.max(0, Math.min(100, p));
+    clip.style.transform = `translateX(${pos - 100}%)`;
+    clipImg.style.transform = `translateX(${100 - pos}%)`;
+    divider.style.transform = `translateX(${pos - 50}%)`;
+    range.value = Math.round(pos);
+    range.setAttribute('aria-valuetext', `${Math.round(pos)}%`);
+  }
+  fig.addEventListener('pointerdown', e => {
+    const rect = fig.getBoundingClientRect();
+    const at = (e.clientX - rect.left) / rect.width * 100;
+    const offset = Math.abs(at - pos) < 26 / rect.width * 100 ? at - pos : 0;
+    drag = { rect, offset }; touched = true;
+    fig.classList.add('held'); fig.setPointerCapture(e.pointerId);
+    set(at - offset);
+  });
+  fig.addEventListener('pointermove', e => { if (drag) set((e.clientX - drag.rect.left) / drag.rect.width * 100 - drag.offset); });
+  const end = () => { drag = null; fig.classList.remove('held'); };
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => fig.addEventListener(t, end));
+  range.addEventListener('input', () => { touched = true; set(+range.value); });
+
+  const thumbs = CASES.map(c => {
+    const b = el('button', 'case', `<img src="assets/cases/${c.id}-after.webp" alt="" width="96" height="64" loading="lazy" decoding="async"><span>${c.name}</span>`);
+    b.type = 'button'; b.dataset.case = c.id; b.setAttribute('aria-pressed', 'false');
+    bind(b, () => `${c.name}, ${loc(c.label)}`, 'aria-label');
+    b.addEventListener('click', () => { touched = true; show(c.id, true); });
+    box.append(b);
+    return b;
+  });
+  function caption() {
+    cap.innerHTML = ''; const s = el('strong'); s.textContent = current.name; cap.append(s, document.createTextNode(' · ' + loc(current.label)));
+    before.alt = `${current.name}: ${loc(current.label)}, ${S().before}`; after.alt = `${current.name}: ${loc(current.label)}, ${S().after}`;
+  }
+  function show(id, user) {
+    const c = CASES.find(x => x.id === id) || CASES[0];
+    if (c === current && before.getAttribute('src')) { caption(); thumbs.forEach(t => t.setAttribute('aria-pressed', String(t.dataset.case === c.id))); return; }
+    current = c;
+    const swap = () => {
+      before.src = `assets/cases/${c.id}-before.webp`; after.src = `assets/cases/${c.id}-after.webp`;
+      set(50); fig.classList.remove('swap');
+    };
+    if (user && !reduceMotion.matches) { fig.classList.add('swap'); setTimeout(swap, 180); } else swap();
+    thumbs.forEach(t => t.setAttribute('aria-pressed', String(t.dataset.case === c.id)));
+    const t = thumbs.find(t => t.dataset.case === c.id);
+    if (t && box.scrollWidth > box.clientWidth) box.scrollTo({ left: t.offsetLeft - 16, behavior: user && !reduceMotion.matches ? 'smooth' : 'auto' });
+    caption();
+    if (user) track('case_view', { case_name: c.id });
+  }
+  /* the hero picks the case while the visitor has not started using this section */
+  function follow(id) { if (!inView && !touched) show(id, false); }
+  /* first time in view: hint the gesture by sweeping the divider once */
+  new IntersectionObserver(([en]) => {
+    inView = en.isIntersecting;
+    if (inView && !hinted && !touched && !reduceMotion.matches) {
+      hinted = true;
+      const t0 = performance.now(), from = 78, to = 50, dur = 900;
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      set(from);
+      const step = now => { if (touched) return; const t = Math.min(1, (now - t0) / dur); set(from + (to - from) * ease(t)); if (t < 1) requestAnimationFrame(step); };
+      setTimeout(() => requestAnimationFrame(step), 250);
+    }
+  }, { threshold: .45 }).observe(fig);
+  set(50);
+  return { show, follow, relabel: caption };
+})();
+
+/* ============================== 3 · doctors + sheet ============================== */
+const docsBox = $('#docs'), sheet = $('#sheet'), panel = $('#sheetPanel');
+let openDoc = null;
+DOCTORS.forEach((d, i) => {
+  const b = el('button', 'doc');
+  b.type = 'button';
+  b.innerHTML = `<span class="doc-ph"><img src="assets/doctors/${d.img}.webp" alt="" width="520" height="646" loading="lazy" decoding="async">${d.founder ? '<span class="doc-tag"></span>' : ''}</span><span class="doc-txt"><span class="doc-name"></span><span class="doc-role"></span><span class="doc-open"><span></span>${icon('r')}</span></span>`;
+  $('.doc-name', b).textContent = d.name;
+  bind($('.doc-role', b), d.role);
+  bind($('.doc-open span', b), () => S().about);
+  if (d.founder) bind($('.doc-tag', b), () => S().founder);
+  bind(b, () => `${d.name}, ${loc(d.role)}`, 'aria-label');
+  b.addEventListener('click', () => openSheet(d, b));
+  docsBox.append(b);
+});
+function fillSheet(d) {
+  $('#sheetImg').src = `assets/doctors/${d.img}.webp`; $('#sheetImg').alt = d.name;
+  $('#sheetName').textContent = d.name;
+  $('#sheetRole').textContent = loc(d.role);
+  const cr = $('#sheetCreds'); cr.innerHTML = '';
+  loc(d.creds).forEach(c => { const li = el('li'); li.textContent = c; cr.append(li); });
+  $('#sheetBio').textContent = loc(d.bio);
+  $('#sheetWaText').textContent = S().consultWith(d.name);
+  $('#sheetWa').href = waLink([S().waHi, S().waDoctor(d.name)], 'doctor-' + d.id);
+  $('#sheetMore').href = EN_SITE + d.url;
+}
+const SPRING = () => ease('--spring');
+const BOUNCE = () => ease('--spring-bounce');
+const isDesktop = () => matchMedia('(min-width:1024px)').matches;
+let returnFocus = null;
+function openSheet(d, from) {
+  openDoc = d; returnFocus = from; fillSheet(d);
+  panel.getAnimations().forEach(a => a.cancel()); panel.style.transform = '';
+  sheet.showModal();
+  requestAnimationFrame(() => sheet.classList.add('open'));
+  const frames = isDesktop() ? [{ transform: 'translateY(24px) scale(.97)', opacity: 0 }, { transform: 'none', opacity: 1 }] : [{ transform: 'translateY(100%)' }, { transform: 'translateY(0)' }];
+  panel.animate(frames, { duration: reduceMotion.matches ? 1 : 520, easing: SPRING(), fill: 'forwards' });
+  track('doctor_open', { doctor: d.id });
+}
+function closeSheet(velocity = 0) {
+  if (!sheet.open) return;
+  sheet.classList.remove('open');
+  const cur = getComputedStyle(panel).transform;
+  const frames = isDesktop() ? [{ transform: cur, opacity: 1 }, { transform: 'translateY(16px) scale(.98)', opacity: 0 }] : [{ transform: cur }, { transform: 'translateY(100%)' }];
+  const dur = reduceMotion.matches ? 1 : Math.max(220, 420 - Math.min(200, Math.abs(velocity) / 8));
+  panel.animate(frames, { duration: dur, easing: 'cubic-bezier(.3,.7,.4,1)', fill: 'forwards' }).finished.then(() => { sheet.close(); returnFocus && returnFocus.focus({ preventScroll: true }); });
+}
+$('#sheetClose').addEventListener('click', () => closeSheet());
+sheet.addEventListener('cancel', e => { e.preventDefault(); closeSheet(); });
+sheet.addEventListener('click', e => { if (e.target === sheet) closeSheet(); });
+/* drag to dismiss: 1:1 tracking, momentum projection, rubber band upward */
+(() => {
+  let start = null, hist = [];
+  const zones = [$('#grab'), $('#sheetTop')];
+  const project = (v, rate = .998) => (v / 1000) * rate / (1 - rate);
+  zones.forEach(z => z.addEventListener('pointerdown', e => {
+    if (isDesktop()) return;
+    start = { y: e.clientY, h: panel.offsetHeight }; hist = [{ y: e.clientY, t: e.timeStamp }];
+    panel.getAnimations().forEach(a => { a.commitStyles?.(); a.cancel(); });
+    z.setPointerCapture(e.pointerId);
+  }));
+  zones.forEach(z => z.addEventListener('pointermove', e => {
+    if (!start) return;
+    let dy = e.clientY - start.y;
+    if (dy < 0) dy = -(Math.abs(dy) * 60) / (60 + Math.abs(dy) * .55);   // rubber band
+    panel.style.transform = `translateY(${dy}px)`;
+    hist.push({ y: e.clientY, t: e.timeStamp }); if (hist.length > 6) hist.shift();
+  }));
+  const release = e => {
+    if (!start) return;
+    const a = hist[0], b = hist[hist.length - 1];
+    const v = (b.t - a.t) > 0 ? (b.y - a.y) / (b.t - a.t) * 1000 : 0;   // px/s
+    const dy = e.clientY - start.y;
+    const end = dy + project(v);
+    const h = start.h; start = null;
+    if (end > h * .45) { closeSheet(v); }
+    else panel.animate([{ transform: panel.style.transform || 'none' }, { transform: 'translateY(0)' }], { duration: 480, easing: v < -200 ? BOUNCE() : SPRING(), fill: 'forwards' }).finished.then(() => { panel.style.transform = ''; });
+  };
+  zones.forEach(z => { z.addEventListener('pointerup', release); z.addEventListener('pointercancel', release); });
+})();
+
+/* ============================== 4 · reviews ============================== */
+const revs = $('#revs');
+REVIEWS.forEach((r, i) => {
+  const f = el('figure', 'rev');
+  f.innerHTML = `<blockquote lang="en"></blockquote><figcaption><img src="assets/reviews/${r.img}.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span><cite></cite><span class="muted"></span></span></figcaption>`;
+  $('blockquote', f).textContent = r.q;
+  $('cite', f).textContent = r.name;
+  if (r.from) bind($('.muted', f), r.from);
+  revs.append(f);
+});
+
+/* ============================== 5 · included, stats, steps ============================== */
+function renderIncluded() {
+  const st = $('#stats'); st.innerHTML = '';
+  STATS[LANG].forEach(([n, unit, txt], i) => {
+    const d = el('div', 'stat'); d.setAttribute('data-reveal', ''); d.style.setProperty('--i', i);
+    d.innerHTML = '<b class="num"><span></span><em></em></b><p></p>';
+    $('b span', d).textContent = n; $('em', d).textContent = unit; $('p', d).textContent = txt;
+    st.append(d);
+  });
+  const inc = $('#incl'); inc.innerHTML = '';
+  INCLUDED[LANG].forEach(([ic, txt], i) => { const li = el('li', '', icon(ic) + '<span></span>'); li.lastChild.textContent = txt; li.setAttribute('data-reveal', ''); li.style.setProperty('--i', i % 3); inc.append(li); });
+  const stp = $('#steps'); stp.innerHTML = '';
+  STEPS[LANG].forEach(([b, s]) => { const li = el('li', '', '<b></b><span></span>'); $('b', li).textContent = b; $('span', li).textContent = s; stp.append(li); });
+  observeReveals();
+}
+/* treatment links in the contact tile */
+const tl = $('#treatLinks');
+SERVICES.forEach(s => { const a = el('a'); a.target = '_blank'; a.rel = 'noopener'; bind(a, () => svcUrl(s), 'href'); bind(a, s.title); tl.append(a); });
+
+/* ============================== rails (desktop arrows) ============================== */
+$$('.rail-wrap').forEach(w => {
+  const rail = $('[data-rail]', w), prev = $('[data-rail-prev]', w), next = $('[data-rail-next]', w);
+  if (!rail || !prev) return;
+  const step = () => (rail.firstElementChild?.offsetWidth || 300) + 12;
+  const sync = () => { prev.disabled = rail.scrollLeft < 4; next.disabled = rail.scrollLeft + rail.clientWidth > rail.scrollWidth - 4; };
+  prev.addEventListener('click', () => rail.scrollBy({ left: -step(), behavior: reduceMotion.matches ? 'auto' : 'smooth' }));
+  next.addEventListener('click', () => rail.scrollBy({ left: step(), behavior: reduceMotion.matches ? 'auto' : 'smooth' }));
+  rail.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true });
+  addEventListener('resize', sync); setTimeout(sync, 300);
+});
+
+/* ============================== reveal on scroll ============================== */
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: .12 }) : null;
+function observeReveals() { $$('[data-reveal]:not(.in)').forEach(n => io ? io.observe(n) : n.classList.add('in')); }
+
+/* ============================== dock visibility ============================== */
+(() => {
+  const dock = $('#dock');
+  new IntersectionObserver(([en]) => { const hide = en.isIntersecting; dock.classList.toggle('away', hide); dock.inert = hide; }, { threshold: .25 }).observe($('#contact .contact-cta'));
+  setTimeout(() => { if (!reduceMotion.matches) dockWa.classList.add('shine'); }, 1700);
+})();
+
+/* ============================== opening state (Istanbul time) ============================== */
+function updateOpen() {
+  const box = $('#openState'), label = $('span', box);
+  try {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Istanbul', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date()).map(x => [x.type, x.value]));
+    const m = (+p.hour % 24) * 60 + +p.minute;
+    const open = (['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(p.weekday) && m >= 660 && m < 1170) || (p.weekday === 'Sat' && m >= 660 && m < 1020);
+    box.classList.toggle('open', open); label.textContent = open ? S().open : S().closed; box.hidden = false;
+  } catch (e) { box.hidden = true; }
+}
+
+/* ============================== language ============================== */
+function setLang(lang, byUser) {
+  LANG = isLang(lang) ? lang : 'tr';
+  document.documentElement.lang = LANG;
+  $$('[data-t]').forEach(n => { const v = S()[n.dataset.t]; if (typeof v === 'string') n.textContent = v; });
+  $$('[data-t-aria]').forEach(n => { const v = S()[n.dataset.tAria]; if (typeof v === 'string') n.setAttribute('aria-label', v); });
+  $$('[data-t-alt]').forEach(n => { const v = S()[n.dataset.tAlt]; if (typeof v === 'string') n.alt = v; });
+  $$('[data-href]').forEach(a => { const h = HREF[a.dataset.href]; if (h) a.href = h[LANG]; });
+  $$('[data-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === LANG)));
+  binds.forEach(([n, v, a]) => setText(n, v, a));
+  lastL2 = ''; renderDock(false);
+  renderIncluded();
+  results.relabel();
+  if (openDoc && sheet.open) fillSheet(openDoc);
+  applyLinks(); updateOpen();
+  document.title = LANG === 'tr' ? 'Dentvibe · Yeni gülüşünüzü seçin · WhatsApp’tan ücretsiz plan' : 'Dentvibe · Pick your new smile · Free plan on WhatsApp';
+  if (byUser) { try { localStorage.setItem('dv_lang', LANG); } catch (e) {} track('language_change', { new_lang: LANG }); }
+}
+$$('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang, true)));
+
+/* ============================== boot ============================== */
+setLang((() => {
+  const q = params.get('lang'); if (isLang(q)) return q;
+  try { const s = localStorage.getItem('dv_lang'); if (isLang(s)) return s; } catch (e) {}
+  return 'tr';   /* Turkish first (founder decision 2026-11-16); ?lang=en or the visitor's EN choice switch it */
+})(), false);
+results.show(SERVICES[0].caseId, false);
+measure();
+setActive(0);
+observeReveals();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+addEventListener('load', measure);
+</script>
+</body>
+</html>
