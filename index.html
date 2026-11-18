@@ -46,6 +46,9 @@
   --color-on-tertiary-muted: #A9B3CC;
   --color-accent-text: #00728D;
   --color-accent-on-dark: #5CD9F3;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1EBE5D;
+  --color-on-whatsapp: #111B21;
   --color-outline: #E6E8EE;
   --color-outline-strong: #CCD1DD;
   --font-figtree: "Figtree", system-ui, sans-serif;
@@ -119,6 +122,9 @@
   --accent-hover:var(--color-secondary-hover);
   --on-accent:var(--color-on-secondary);
   --accent-ink:var(--color-accent-on-dark);
+  --wa:var(--color-whatsapp);
+  --wa-hover:var(--color-whatsapp-hover);
+  --on-wa:var(--color-on-whatsapp);
   /* light tiles (follow the system appearance) */
   --surface:var(--color-surface);
   --mist:var(--color-neutral);
@@ -211,6 +217,8 @@ figure{margin:0}
 .btn:active{transform:scale(.97)}
 .btn-primary{background:var(--accent);color:var(--on-accent)}
 @media (hover:hover){.btn-primary:hover{background:var(--accent-hover)}}
+.btn-wa{background:var(--wa);color:var(--on-wa)}
+@media (hover:hover){.btn-wa:hover{background:var(--wa-hover)}}
 .btn-bordered{background:transparent;color:inherit;border-color:var(--sep-strong)}
 .ink .btn-bordered{border-color:rgb(255 255 255 / .28)}
 @media (hover:hover){.btn-bordered:hover{border-color:currentColor}}
@@ -441,13 +449,14 @@ dialog.sheet.open::backdrop{opacity:1}
 .contact{padding-bottom:calc(var(--spacing-section-compact) + var(--dock-space))}
 .contact h2{font-size:var(--text-display-compact);line-height:var(--text-display-compact--line-height);letter-spacing:var(--text-display-compact--letter-spacing)}
 .contact-cta{display:flex;flex-wrap:wrap;gap:10px;margin:var(--spacing-lg) 0 12px}
-.contact-cta .btn-primary{flex:1 1 0;min-width:0}
+.contact-cta .btn-wa{flex:1 1 0;min-width:0}
 .note{color:var(--on-ink-2);max-width:34rem}
 .group{margin-top:var(--spacing-xl);border-radius:var(--radius-md);background:var(--ink-2);overflow:hidden}
 .group li+li .row::before{content:"";position:absolute;top:0;left:52px;right:0;border-top:1px solid rgb(255 255 255 / .08)}
 .row{position:relative;display:flex;align-items:center;gap:14px;min-height:60px;padding:10px 16px;transition:background-color .15s}
 a.row:hover,a.row:active{background:rgb(255 255 255 / .05)}
 .row-lead{width:22px;height:22px;color:var(--accent-ink)}
+.row-lead.wa{color:var(--wa)}
 .row-text{flex:1;min-width:0;display:flex;flex-direction:column}
 .row-title{font-weight:600}
 .row-sub{font-size:var(--text-body-sm);color:var(--on-ink-2)}
@@ -722,12 +731,12 @@ a.row:hover,a.row:active{background:rgb(255 255 255 / .05)}
         <h2 id="contact-title" data-t="ctTitle">Randevunuzu hemen planlayalım.</h2>
         <p class="lead" style="display:block" data-t="ctSub">Size uygun gün ve saati WhatsApp’tan yazın, koordinatörümüz sizinle iletişime geçsin.</p>
         <div class="contact-cta">
-          <a class="btn btn-primary" data-wa="contact" href="https://wa.me/905449547728"><svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg><span data-t="ctBtn">WhatsApp’tan yazın</span></a>
+          <a class="btn btn-wa" data-wa="contact" href="https://wa.me/905449547728"><svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg><span data-t="ctBtn">WhatsApp’tan yazın</span></a>
           <a class="btn btn-bordered" href="tel:+905449547728"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span data-t="call">Arayın</span></a>
         </div>
         <p class="note footnote" data-t="note">WhatsApp mesajınız hazır olarak açılır; siz göndermeden hiçbir şey gönderilmez.</p>
         <ul class="group">
-          <li><a class="row" data-wa="contact-row" href="https://wa.me/905449547728"><svg class="ic ic-f row-lead" aria-hidden="true"><use href="#i-wa"/></svg><span class="row-text"><span class="row-title">WhatsApp</span><span class="row-sub" data-t="coord">7/24 kişisel hasta koordinatörü</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+          <li><a class="row" data-wa="contact-row" href="https://wa.me/905449547728"><svg class="ic ic-f row-lead wa" aria-hidden="true"><use href="#i-wa"/></svg><span class="row-text"><span class="row-title">WhatsApp</span><span class="row-sub" data-t="coord">7/24 kişisel hasta koordinatörü</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
           <li><a class="row" href="tel:+905449547728"><svg class="ic row-lead" aria-hidden="true"><use href="#i-phone"/></svg><span class="row-text"><span class="row-title" data-t="phone">Telefon</span><span class="row-sub num">+90 544 954 77 28</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
           <li><a class="row" href="https://maps.app.goo.gl/zH8UvKhiRYjfw96A8" target="_blank" rel="noopener"><svg class="ic row-lead" aria-hidden="true"><use href="#i-pin"/></svg><span class="row-text"><span class="row-title" data-t="directionsShort">Yol tarifi</span><span class="row-sub">Hızırbey Cd. 25CJ, Fikirtepe, Kadıköy</span></span><svg class="ic row-trail" aria-hidden="true"><use href="#i-out"/></svg></a></li>
           <li><div class="row"><svg class="ic row-lead" aria-hidden="true"><use href="#i-clock"/></svg><span class="row-text"><span class="row-title" data-t="hours">Çalışma saatleri</span><span class="row-sub num" data-t="hoursVal">Pzt–Cum 11:00–19:30 · Cmt 11:00–17:00</span></span><span class="state" id="openState" hidden><i aria-hidden="true"></i><span></span></span></div></li>
@@ -770,7 +779,7 @@ a.row:hover,a.row:active{background:rgb(255 255 255 / .05)}
 
 <!-- the single primary action -->
 <div class="dock" id="dock">
-  <a class="btn btn-primary dock-wa" id="dockWa" data-wa="dock" href="https://wa.me/905449547728">
+  <a class="btn btn-wa dock-wa" id="dockWa" data-wa="dock" href="https://wa.me/905449547728">
     <svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg>
     <span class="dock-text"><span class="dock-l1" data-t="dockL1">WhatsApp’tan randevu al</span><span class="dock-l2" id="dockL2"></span></span>
     <span class="count num" id="count" hidden></span>
@@ -790,7 +799,7 @@ a.row:hover,a.row:active{background:rgb(255 255 255 / .05)}
     <ul class="creds" id="sheetCreds"></ul>
     <p class="sheet-bio" id="sheetBio"></p>
     <div class="sheet-actions">
-      <a class="btn btn-primary" id="sheetWa" data-wa="doctor" href="https://wa.me/905449547728"><svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg><span id="sheetWaText"></span></a>
+      <a class="btn btn-wa" id="sheetWa" data-wa="doctor" href="https://wa.me/905449547728"><svg class="ic ic-f" aria-hidden="true"><use href="#i-wa"/></svg><span id="sheetWaText"></span></a>
       <a class="link" id="sheetMore" href="https://www.dentvibe.com.tr/doktorlarimiz" target="_blank" rel="noopener"><span data-t="fullProfile">Hekim ekibimiz</span><svg class="ic"><use href="#i-out"/></svg></a>
     </div>
   </div>
